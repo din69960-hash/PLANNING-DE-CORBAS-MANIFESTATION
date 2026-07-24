@@ -1878,7 +1878,7 @@ let currentUser = null; // { nom, role: 'asso'|'agent'|'admin' }
 let S={
   mdpAsso:localStorage.getItem('mdp_asso')||'Corbas',
   mdpAdmin:localStorage.getItem('mdp_admin')||'Corbas',
-  mdpAgent:localStorage.getItem('mdp_agent')||'Agent69',
+  mdpAgent:localStorage.getItem('mdp_agent')||'Corbas',
   verrou:localStorage.getItem('verrou')==='true',
   annee:parseInt(localStorage.getItem('annee')||'2026'),
   mois:JSON.parse(localStorage.getItem('mois_data')||'null'),
@@ -2477,6 +2477,10 @@ function updateSaisonBadges(){
 }
 
 
+// Réinitialiser les codes aux valeurs par défaut si besoin
+if(!S.mdpAdmin || S.mdpAdmin==='') S.mdpAdmin='Corbas';
+if(!S.mdpAgent || S.mdpAgent==='') S.mdpAgent='Corbas';
+if(!S.mdpAsso  || S.mdpAsso==='')  S.mdpAsso='Corbas';
 majVerrou();
 initSupabase();
 
