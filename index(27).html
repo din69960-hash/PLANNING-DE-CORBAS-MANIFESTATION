@@ -1,0 +1,2508 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planning Manifestations – Corbas 2026–2027</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+:root{--bleu:#003F8A;--bleu2:#1565C0;--bleu3:#1E88E5;--accent:#FF6B00;--accent2:#FFB300;--blanc:#fff;--gris:#F4F7FB;--texte:#0D1B2A;--texte2:#4A5568;--vert:#2E7D32;--rouge:#C62828;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Outfit',sans-serif;background:#001E50;color:#fff;min-height:100vh;overflow-x:hidden;}
+.page{display:none;}.page.active{display:block;}
+.hero{min-height:100vh;background:linear-gradient(135deg,#001230 0%,#003F8A 50%,#0D5EA8 100%);position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;padding:40px 20px;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");pointer-events:none;}
+.orb{position:absolute;border-radius:50%;pointer-events:none;}
+.orb1{width:500px;height:500px;top:-150px;right:-150px;background:radial-gradient(circle,rgba(30,136,229,.15),transparent 70%);animation:pulse 8s ease-in-out infinite;}
+.orb2{width:350px;height:350px;bottom:-80px;left:-80px;background:radial-gradient(circle,rgba(255,107,0,.1),transparent 70%);animation:pulse 8s ease-in-out 3s infinite;}
+@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.08);}}
+.badge{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:50px;padding:8px 22px 8px 10px;margin-bottom:30px;backdrop-filter:blur(8px);animation:fadeDown .8s ease both;}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.badge span{font-size:13px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.8);}
+.hero-titre{font-family:'Bebas Neue',sans-serif;font-size:clamp(54px,10vw,108px);line-height:.92;text-align:center;letter-spacing:2px;animation:fadeUp .9s ease .2s both;position:relative;z-index:1;}
+.hero-titre em{color:var(--accent);font-style:normal;}
+.hero-sub{font-size:17px;color:rgba(255,255,255,.65);margin:18px 0 48px;text-align:center;max-width:500px;line-height:1.6;animation:fadeUp .9s ease .4s both;}
+.cards-row{display:flex;gap:22px;flex-wrap:wrap;justify-content:center;animation:fadeUp .9s ease .6s both;position:relative;z-index:1;}
+.login-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:34px 28px;width:270px;text-align:center;cursor:pointer;transition:transform .3s,background .3s,border-color .3s;backdrop-filter:blur(10px);}
+.login-card:hover{transform:translateY(-6px);background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.32);}
+.login-card .ci{font-size:44px;margin-bottom:14px;display:block;}
+.login-card h2{font-size:19px;font-weight:600;margin-bottom:8px;}
+.login-card p{font-size:13px;color:rgba(255,255,255,.6);line-height:1.5;margin-bottom:22px;}
+.btn-cx{display:inline-block;padding:11px 26px;border-radius:50px;font-size:14px;font-weight:600;cursor:pointer;border:none;font-family:'Outfit',sans-serif;transition:transform .2s,box-shadow .2s;}
+.btn-cx:hover{transform:scale(1.05);box-shadow:0 6px 18px rgba(0,0,0,.3);}
+.btn-asso{background:#fff;color:var(--bleu);}.btn-admin{background:var(--accent);color:#fff;}
+.sport-deco{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;gap:16px;opacity:.18;font-size:24px;animation:fadeUp 1s ease 1s both;}
+.modal-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,5,20,.8);backdrop-filter:blur(6px);align-items:center;justify-content:center;}
+.modal-overlay.open{display:flex;}
+.modal{background:#fff;color:var(--texte);border-radius:22px;padding:38px 34px;width:100%;max-width:420px;position:relative;animation:popIn .35s cubic-bezier(.34,1.56,.64,1) both;box-shadow:0 30px 80px rgba(0,0,0,.4);}
+@keyframes popIn{from{transform:scale(.85) translateY(30px);opacity:0}to{transform:scale(1) translateY(0);opacity:1}}
+.modal-x{position:absolute;top:13px;right:17px;background:none;border:none;font-size:20px;cursor:pointer;color:#718096;line-height:1;}
+.modal h3{font-size:20px;font-weight:700;margin-bottom:6px;color:var(--bleu);}
+.modal .mi{font-size:40px;margin-bottom:14px;display:block;}
+.modal p{font-size:13px;color:var(--texte2);margin-bottom:20px;line-height:1.5;}
+.inp-code{width:100%;padding:13px 16px;border:2px solid #E2E8F0;border-radius:10px;font-size:20px;font-family:'Outfit',sans-serif;font-weight:700;letter-spacing:6px;text-align:center;outline:none;transition:border .2s;color:var(--texte);}
+.inp-code:focus{border-color:var(--bleu3);}
+.inp-txt{width:100%;padding:12px 14px;border:2px solid #E2E8F0;border-radius:10px;font-size:15px;font-family:'Outfit',sans-serif;outline:none;color:var(--texte);margin-bottom:10px;transition:border .2s;}
+.inp-txt:focus{border-color:var(--bleu3);}
+.btn-v{width:100%;margin-top:14px;padding:13px;border-radius:10px;border:none;font-size:15px;font-weight:600;font-family:'Outfit',sans-serif;cursor:pointer;transition:opacity .2s;}
+.btn-v:hover{opacity:.88;}
+.bv-blue{background:var(--bleu);color:#fff;}.bv-orange{background:var(--accent);color:#fff;}.bv-red{background:#C62828;color:#fff;}
+.err{color:#C62828;font-size:12px;margin-top:8px;text-align:center;display:none;}
+.confirm-box{background:#fff;color:var(--texte);border-radius:18px;padding:32px 28px;width:100%;max-width:380px;text-align:center;animation:popIn .3s cubic-bezier(.34,1.56,.64,1) both;box-shadow:0 20px 60px rgba(0,0,0,.4);}
+.confirm-box h3{font-size:18px;font-weight:700;color:#C62828;margin-bottom:10px;}
+.confirm-box p{font-size:13.5px;color:#4A5568;line-height:1.6;margin-bottom:24px;}
+.confirm-btns{display:flex;gap:12px;justify-content:center;}
+.confirm-btns button{padding:10px 24px;border-radius:10px;font-size:14px;font-weight:600;border:none;cursor:pointer;font-family:'Outfit',sans-serif;}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:11px 24px;position:sticky;top:0;z-index:50;flex-wrap:wrap;gap:8px;}
+.topbar.blue{background:var(--bleu);}.topbar.dark{background:#0A1628;border-bottom:1px solid rgba(255,255,255,.08);}
+.topbar.light{background:#fff;border-bottom:1px solid #E2E8F0;color:var(--texte);}
+.topbar h1{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;}
+.topbar.light h1{color:var(--bleu);}
+.btn-back{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:6px 16px;border-radius:50px;font-size:12px;cursor:pointer;font-family:'Outfit',sans-serif;transition:background .2s;}
+.btn-back:hover{background:rgba(255,255,255,.22);}
+.btn-back-light{background:var(--gris);border:1px solid #E2E8F0;color:var(--texte);padding:6px 16px;border-radius:50px;font-size:12px;cursor:pointer;font-family:'Outfit',sans-serif;}
+.planning-shell{display:flex;flex-direction:column;height:calc(100vh - 52px);}
+.tabs-zone{flex-shrink:0;position:relative;}.table-zone{flex:1;overflow:auto;}
+.tabs-wrapper{position:relative;background:#0A1628;padding:10px 44px 0;}
+.tabs-bar{display:flex;overflow-x:hidden;gap:3px;scrollbar-width:none;transition:scroll .2s;}
+.tabs-bar::-webkit-scrollbar{display:none;}
+.tabs-bar .tab{flex-shrink:0;padding:7px 13px;border-radius:7px 7px 0 0;font-size:12px;font-weight:600;cursor:pointer;border:none;font-family:'Outfit',sans-serif;background:rgba(255,255,255,.07);color:rgba(255,255,255,.5);transition:background .2s,color .2s;white-space:nowrap;}
+.tabs-bar .tab:hover{background:rgba(255,255,255,.13);color:#fff;}
+.tabs-bar .tab.active{background:var(--bleu);color:#fff;}
+.tabs-bar .tab.act-tab{background:rgba(255,107,0,.12);color:rgba(255,165,0,.7);}
+.tabs-bar .tab.act-tab:hover{background:rgba(255,107,0,.22);color:rgba(255,165,0,.95);}
+.tabs-bar .tab.act-tab.active{background:var(--accent);color:#fff;}
+.tabs-bar .tab.bilan-tab{background:rgba(46,125,50,.12);color:rgba(100,200,100,.7);}
+.tabs-bar .tab.bilan-tab.active{background:#2E7D32;color:#fff;}
+.tabs-bar .sep{width:1px;background:rgba(255,255,255,.12);margin:4px 6px 0;flex-shrink:0;}
+.tabs-bar .lbl{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.3);padding:0 4px;align-self:flex-end;margin-bottom:3px;flex-shrink:0;}
+.tab-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(10,22,40,.95);border:1px solid rgba(255,255,255,.15);color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;z-index:10;transition:background .2s;user-select:none;}
+.tab-arrow:hover{background:var(--bleu);}
+.tab-arrow-left{left:4px;}.tab-arrow-right{right:4px;}
+.tab-add-btn{flex-shrink:0;padding:5px 10px;border-radius:7px 7px 0 0;font-size:18px;font-weight:700;cursor:pointer;border:1px dashed rgba(255,255,255,.25);background:transparent;color:rgba(255,255,255,.4);font-family:'Outfit',sans-serif;transition:all .2s;align-self:flex-end;margin-bottom:0;}
+.tab-add-btn:hover{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.5);}
+.mois-header{padding:10px 16px;background:#0D1F38;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;flex-shrink:0;}
+.mois-header h2{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:1px;}
+.an-badge{background:var(--accent);color:#fff;padding:3px 12px;border-radius:50px;font-size:12px;font-weight:700;}
+.macro-btns{display:flex;gap:6px;flex-wrap:wrap;}
+.mbtn{padding:7px 13px;border-radius:7px;font-size:11px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:opacity .2s,transform .15s;}
+.mbtn:hover{opacity:.85;transform:translateY(-1px);}
+.mb-o{background:#E65100;color:#fff;}.mb-b{background:var(--bleu3);color:#fff;}.mb-g{background:#2E7D32;color:#fff;}.mb-p{background:#6A1B9A;color:#fff;}.mb-r{background:#C62828;color:#fff;}
+.lock-bar{background:rgba(198,40,40,.12);border-bottom:1px solid rgba(198,40,40,.3);padding:8px 16px;font-size:12px;color:rgba(255,130,130,.9);display:flex;align-items:center;gap:8px;}
+.sync-bar{background:rgba(30,136,229,.1);border-bottom:1px solid rgba(30,136,229,.2);padding:6px 16px;font-size:11px;color:rgba(100,180,255,.8);display:flex;align-items:center;gap:8px;}
+table.tm{width:100%;border-collapse:collapse;min-width:700px;font-size:12px;}
+table.tm thead th{background:#0D1F38;color:rgba(255,255,255,.65);padding:8px 8px;text-align:left;border-bottom:2px solid rgba(255,255,255,.15);border-right:1px solid rgba(255,255,255,.12);white-space:nowrap;font-size:10px;text-transform:uppercase;letter-spacing:.06em;position:sticky;top:0;z-index:5;}
+table.tm thead th:last-child{border-right:none;}
+table.tm tbody tr{border-bottom:1px solid rgba(255,255,255,.07);}
+table.tm tbody tr.sc>td{border-top:2px solid rgba(30,136,229,.4)!important;}
+table.tm tbody td{padding:0;color:rgba(255,255,255,.85);vertical-align:top;border-right:1px solid rgba(255,255,255,.1);}
+table.tm tbody td:last-child{border-right:none;}
+table.tm tbody tr.sem-even td{background:rgba(255,255,255,.03);}
+table.tm tbody tr.sem-odd td{background:rgba(255,255,255,.07);}
+table.tm tbody tr.sem-even:hover td{background:rgba(30,136,229,.09);}
+table.tm tbody tr.sem-odd:hover td{background:rgba(30,136,229,.14);}
+td.csem{font-weight:800;color:#42A5F5;font-size:13px;width:90px;min-width:90px;text-align:center;padding:6px 4px!important;vertical-align:middle!important;border-right:2px solid rgba(30,136,229,.4)!important;line-height:1.5;}
+td.cdeb,td.cfin{text-align:center;width:42px;color:#FFB300;font-size:11px;}
+td.cdur{text-align:center;width:36px;color:rgba(255,255,255,.4);font-size:10px;}
+td.cdate{text-align:center;width:72px;font-size:10px;color:rgba(255,255,255,.4);padding:5px 4px!important;}
+.ei{background:transparent;border:none;color:rgba(255,255,255,.88);font-family:'Outfit',sans-serif;font-size:12px;width:100%;padding:5px 7px;outline:none;transition:background .15s;resize:none;display:block;box-sizing:border-box;}
+.ei:hover{background:rgba(255,255,255,.06);}
+.ei:focus{background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1.5px rgba(30,136,229,.5);}
+.ei.ro{pointer-events:none;opacity:.6;}
+.ei.admin-only{pointer-events:none;opacity:.5;cursor:not-allowed;}
+textarea.ei{overflow:hidden;min-height:28px;line-height:1.4;}
+tr.trow td{border-top:2px solid rgba(30,136,229,.25)!important;padding:7px 8px!important;}
+table.ta{width:100%;border-collapse:collapse;min-width:700px;font-size:12.5px;}
+table.ta thead th{background:#0D1F38;color:rgba(255,255,255,.65);padding:9px 10px;text-align:left;border-bottom:2px solid rgba(255,255,255,.08);white-space:nowrap;font-size:11px;text-transform:uppercase;letter-spacing:.06em;position:sticky;top:0;z-index:5;}
+table.ta tbody tr{border-bottom:1px solid rgba(255,255,255,.04);}
+table.ta tbody tr:hover{background:rgba(255,255,255,.03);}
+table.ta tbody td{padding:8px 10px;color:rgba(255,255,255,.85);vertical-align:middle;}
+table.ta tr.mr td{background:rgba(30,136,229,.1);color:#64B5F6;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:5px 10px;}
+table.ta tr.tr-tot td{background:rgba(255,107,0,.08);color:#FFB300;font-size:11px;font-weight:700;}
+.aei{background:transparent;border:none;color:rgba(255,255,255,.88);font-family:'Outfit',sans-serif;font-size:12.5px;width:100%;padding:4px 6px;border-radius:5px;outline:none;transition:background .15s;resize:none;display:block;box-sizing:border-box;}
+.aei:hover{background:rgba(255,255,255,.05);}
+.aei:focus{background:rgba(255,255,255,.09);box-shadow:0 0 0 1.5px rgba(30,136,229,.5);}
+.aei.ro{pointer-events:none;opacity:.6;}
+textarea.aei{overflow:hidden;min-height:26px;line-height:1.4;}
+.bilan-bg{min-height:100vh;background:var(--gris);color:var(--texte);}
+.bilan-wrap{max-width:900px;margin:0 auto;padding:36px 24px;}
+.bilan-wrap h2{font-size:22px;font-weight:700;color:var(--bleu);margin-bottom:4px;}
+.bcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:18px 0 24px;}
+.bc{background:#fff;border-radius:12px;padding:16px;border:1px solid #E2E8F0;text-align:center;}
+.bc .n{font-size:26px;font-weight:700;color:var(--bleu);}
+.bc .l{font-size:10.5px;color:var(--texte2);text-transform:uppercase;letter-spacing:.05em;margin-top:2px;}
+table.tb{width:100%;border-collapse:collapse;font-size:13px;}
+table.tb thead th{background:var(--bleu);color:#fff;padding:10px 12px;text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;}
+table.tb tbody tr:nth-child(even){background:#f0f4fb;}
+table.tb tbody tr:hover{background:#dce8f8;}
+table.tb tbody td{padding:8px 12px;border-bottom:1px solid #E2E8F0;}
+.nr{text-align:right;font-weight:600;color:var(--bleu);}
+.notetd{font-size:11px;color:#718096;font-style:italic;}
+.admin-bg{min-height:100vh;background:var(--gris);color:var(--texte);}
+.admin-inner{max-width:900px;margin:0 auto;padding:44px 24px;}
+.admin-inner h2{font-size:22px;font-weight:700;color:var(--bleu);margin-bottom:5px;}
+.admin-inner .st{color:var(--texte2);margin-bottom:36px;font-size:14px;}
+.agrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;}
+.acard{background:#fff;border-radius:16px;padding:26px 20px;border:1px solid #E2E8F0;cursor:pointer;transition:transform .2s,box-shadow .2s,border-color .2s;text-align:center;}
+.acard:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,63,138,.1);border-color:var(--bleu3);}
+.acard .ai{font-size:38px;margin-bottom:12px;}
+.acard h3{font-size:15px;font-weight:700;margin-bottom:6px;color:var(--texte);}
+.acard p{font-size:12px;color:var(--texte2);line-height:1.55;margin-bottom:14px;}
+.abtn{display:inline-block;padding:7px 18px;border-radius:50px;font-size:12px;font-weight:600;border:none;cursor:pointer;font-family:'Outfit',sans-serif;}
+.ab-b{background:var(--bleu);color:#fff;}.ab-o{background:var(--accent);color:#fff;}.ab-g{background:#2E7D32;color:#fff;}.ab-r{background:#C62828;color:#fff;}.ab-p{background:#6A1B9A;color:#fff;}.ab-t{background:#00695C;color:#fff;}
+.extract-bg{min-height:100vh;background:var(--gris);color:var(--texte);}
+.extract-wrap{max-width:820px;margin:0 auto;padding:44px 24px;}
+.extract-wrap h2{font-size:22px;font-weight:700;color:var(--bleu);margin-bottom:6px;}
+.extract-section{background:#fff;border-radius:16px;padding:24px;border:1px solid #E2E8F0;margin-bottom:20px;}
+.extract-section h3{font-size:16px;font-weight:700;color:var(--bleu);margin-bottom:16px;}
+.extract-btns{display:flex;flex-wrap:wrap;gap:10px;}
+.ebtn{padding:9px 18px;border-radius:9px;font-size:13px;font-weight:600;border:none;cursor:pointer;font-family:'Outfit',sans-serif;background:var(--bleu);color:#fff;transition:opacity .2s,transform .2s;display:flex;align-items:center;gap:6px;}
+.ebtn:hover{opacity:.85;transform:translateY(-1px);}
+.ebtn.green{background:#2E7D32;}.ebtn.orange{background:var(--accent);}
+.wrap{max-width:620px;margin:0 auto;padding:44px 24px;}
+.wrap h2{font-size:21px;font-weight:700;color:var(--bleu);margin-bottom:5px;}
+.wrap .st{color:var(--texte2);margin-bottom:26px;font-size:13.5px;}
+.sb{border-radius:10px;padding:12px 18px;font-size:13px;font-weight:600;margin-bottom:22px;display:flex;align-items:center;gap:10px;}
+.sb-open{background:#F0FFF4;color:#276749;border:1px solid #9AE6B4;}
+.sb-lock{background:#FFF5F5;color:#9B2C2C;border:1px solid #FEB2B2;}
+.vcard{background:#fff;border-radius:14px;padding:20px 18px;border:1px solid #E2E8F0;margin-bottom:12px;display:flex;align-items:center;gap:16px;}
+.vcard .vi{font-size:32px;flex-shrink:0;}
+.vcard h3{font-size:14px;font-weight:700;margin-bottom:3px;}
+.vcard p{font-size:12px;color:var(--texte2);line-height:1.5;}
+.vcard button{margin-left:auto;flex-shrink:0;padding:8px 16px;border-radius:9px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;border:none;cursor:pointer;transition:opacity .2s;}
+.fg{background:#fff;border-radius:12px;padding:18px;border:1px solid #E2E8F0;margin-bottom:14px;}
+.fg label{display:block;font-size:11px;font-weight:700;color:var(--texte2);margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em;}
+.fg input{width:100%;padding:10px 12px;border:2px solid #E2E8F0;border-radius:9px;font-size:15px;font-family:'Outfit',sans-serif;outline:none;color:var(--texte);transition:border .2s;}
+.fg input:focus{border-color:var(--bleu3);}
+.save-btn{padding:10px 26px;background:var(--bleu);color:#fff;border:none;border-radius:9px;font-size:13.5px;font-weight:600;font-family:'Outfit',sans-serif;cursor:pointer;}
+.save-btn:hover{opacity:.88;}
+.mf{font-size:12px;margin-bottom:10px;display:none;}
+.dark-bg{background:#0A1628;color:#fff;min-height:100vh;}
+.db-status{position:fixed;bottom:16px;right:16px;padding:8px 14px;border-radius:50px;font-size:11px;font-weight:600;z-index:100;display:flex;align-items:center;gap:6px;backdrop-filter:blur(8px);}
+.db-ok{background:rgba(46,125,50,.85);color:#fff;}
+.db-local{background:rgba(180,100,0,.85);color:#fff;}
+.db-err{background:rgba(198,40,40,.85);color:#fff;}
+.toast{position:fixed;bottom:54px;left:50%;transform:translateX(-50%) translateY(70px);background:#1A202C;color:#fff;padding:10px 22px;border-radius:50px;font-size:13px;font-weight:500;z-index:999;transition:transform .4s cubic-bezier(.34,1.56,.64,1);pointer-events:none;white-space:nowrap;}
+.toast.show{transform:translateX(-50%) translateY(0);}
+.asso-select{flex-shrink:0;align-self:flex-end;padding:7px 10px;border-radius:7px 7px 0 0;font-size:12px;font-weight:600;font-family:'Outfit',sans-serif;background:rgba(255,107,0,.14);color:#FFB74D;border:none;cursor:pointer;outline:none;max-width:200px;transition:background .2s;}
+.asso-select:hover{background:rgba(255,107,0,.26);}
+.asso-select.on{background:var(--accent);color:#fff;}
+.asso-select option{background:#0A1628;color:#fff;}
+select.ei{appearance:auto;background:#0D1F38;color:#fff;border:1px solid rgba(255,255,255,.15);border-radius:5px;padding:4px 5px;font-size:11px;width:100%;cursor:pointer;display:block;margin:2px 0;font-family:'Outfit',sans-serif;}
+select.ei:disabled{opacity:.4;cursor:not-allowed;}
+select.ei option{background:#0D1F38;color:#fff;}
+tr.conflict td{background:rgba(198,40,40,.32)!important;box-shadow:inset 3px 0 0 #FF5252;}
+tr.conflict:hover td{background:rgba(198,40,40,.45)!important;}
+.conflict-bar{background:rgba(198,40,40,.14);border-bottom:1px solid rgba(198,40,40,.4);padding:8px 16px;font-size:12px;color:#FF8A80;font-weight:600;display:flex;gap:8px;align-items:center;}
+.lieu-item{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;border:1px solid #E2E8F0;border-radius:8px;margin-bottom:6px;font-size:13px;background:#fff;}
+.lieu-item button{background:#C62828;color:#fff;border:none;border-radius:6px;padding:5px 10px;font-size:11px;cursor:pointer;font-family:'Outfit',sans-serif;}
+.lieu-cat-h{font-size:12px;font-weight:700;color:var(--bleu);margin:14px 0 6px;text-transform:uppercase;letter-spacing:.05em;}
+@media(max-width:600px){.login-card{width:100%;max-width:300px;}.vcard{flex-direction:column;text-align:center;}.vcard button{margin-left:0;}}
+
+
+.modal-field{margin-bottom:12px;}
+.modal-field label{display:block;font-size:11px;font-weight:700;color:var(--texte2);margin-bottom:4px;text-transform:uppercase;letter-spacing:.05em;}
+.modal-field select,.modal-field input{width:100%;padding:10px 12px;border:2px solid #E2E8F0;border-radius:9px;font-size:14px;font-family:'Outfit',sans-serif;outline:none;color:var(--texte);transition:border .2s;background:#fff;box-sizing:border-box;}
+.modal-field select:focus,.modal-field input:focus{border-color:var(--bleu3);}
+.consent-box{background:#F4F7FB;border-radius:10px;padding:14px;margin:12px 0;}
+.consent-box>p{font-size:12px;color:var(--texte2);margin-bottom:10px;}
+.consent-row{display:flex;gap:8px;align-items:flex-start;margin-bottom:8px;font-size:12px;color:var(--texte);line-height:1.4;}
+.consent-row:last-child{margin-bottom:0;}
+.consent-row input[type=checkbox]{margin-top:2px;flex-shrink:0;}
+.btn-link{background:none;border:none;color:var(--bleu);font-size:12px;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;padding:0;text-decoration:underline;}
+.err-msg{color:#C62828;font-size:12px;margin-bottom:8px;display:none;padding:8px 12px;background:#FFF5F5;border-radius:8px;border:1px solid #FEB2B2;}
+
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planning Manifestations – Corbas 2026–2027</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+:root{--bleu:#003F8A;--bleu2:#1565C0;--bleu3:#1E88E5;--accent:#FF6B00;--accent2:#FFB300;--blanc:#fff;--gris:#F4F7FB;--texte:#0D1B2A;--texte2:#4A5568;--vert:#2E7D32;--rouge:#C62828;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Outfit',sans-serif;background:#001E50;color:#fff;min-height:100vh;overflow-x:hidden;}
+.page{display:none;}.page.active{display:block;}
+.hero{min-height:100vh;background:linear-gradient(135deg,#001230 0%,#003F8A 50%,#0D5EA8 100%);position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;padding:40px 20px;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");pointer-events:none;}
+.orb{position:absolute;border-radius:50%;pointer-events:none;}
+.orb1{width:500px;height:500px;top:-150px;right:-150px;background:radial-gradient(circle,rgba(30,136,229,.15),transparent 70%);animation:pulse 8s ease-in-out infinite;}
+.orb2{width:350px;height:350px;bottom:-80px;left:-80px;background:radial-gradient(circle,rgba(255,107,0,.1),transparent 70%);animation:pulse 8s ease-in-out 3s infinite;}
+@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.08);}}
+.badge{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:50px;padding:8px 22px 8px 10px;margin-bottom:30px;backdrop-filter:blur(8px);animation:fadeDown .8s ease both;}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.badge span{font-size:13px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.8);}
+.hero-titre{font-family:'Bebas Neue',sans-serif;font-size:clamp(54px,10vw,108px);line-height:.92;text-align:center;letter-spacing:2px;animation:fadeUp .9s ease .2s both;position:relative;z-index:1;}
+.hero-titre em{color:var(--accent);font-style:normal;}
+.hero-sub{font-size:17px;color:rgba(255,255,255,.65);margin:18px 0 48px;text-align:center;max-width:500px;line-height:1.6;animation:fadeUp .9s ease .4s both;}
+.cards-row{display:flex;gap:22px;flex-wrap:wrap;justify-content:center;animation:fadeUp .9s ease .6s both;position:relative;z-index:1;}
+.login-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:34px 28px;width:270px;text-align:center;cursor:pointer;transition:transform .3s,background .3s,border-color .3s;backdrop-filter:blur(10px);}
+.login-card:hover{transform:translateY(-6px);background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.32);}
+.login-card .ci{font-size:44px;margin-bottom:14px;display:block;}
+.login-card h2{font-size:19px;font-weight:600;margin-bottom:8px;}
+.login-card p{font-size:13px;color:rgba(255,255,255,.6);line-height:1.5;margin-bottom:22px;}
+.btn-cx{display:inline-block;padding:11px 26px;border-radius:50px;font-size:14px;font-weight:600;cursor:pointer;border:none;font-family:'Outfit',sans-serif;transition:transform .2s,box-shadow .2s;}
+.btn-cx:hover{transform:scale(1.05);box-shadow:0 6px 18px rgba(0,0,0,.3);}
+.btn-asso{background:#fff;color:var(--bleu);}.btn-admin{background:var(--accent);color:#fff;}
+.sport-deco{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;gap:16px;opacity:.18;font-size:24px;animation:fadeUp 1s ease 1s both;}
+.modal-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,5,20,.8);backdrop-filter:blur(6px);align-items:center;justify-content:center;}
+.modal-overlay.open{display:flex;}
+.modal{background:#fff;color:var(--texte);border-radius:22px;padding:38px 34px;width:100%;max-width:420px;position:relative;animation:popIn .35s cubic-bezier(.34,1.56,.64,1) both;box-shadow:0 30px 80px rgba(0,0,0,.4);}
+@keyframes popIn{from{transform:scale(.85) translateY(30px);opacity:0}to{transform:scale(1) translateY(0);opacity:1}}
+.modal-x{position:absolute;top:13px;right:17px;background:none;border:none;font-size:20px;cursor:pointer;color:#718096;line-height:1;}
+.modal h3{font-size:20px;font-weight:700;margin-bottom:6px;color:var(--bleu);}
+.modal .mi{font-size:40px;margin-bottom:14px;display:block;}
+.modal p{font-size:13px;color:var(--texte2);margin-bottom:20px;line-height:1.5;}
+.inp-code{width:100%;padding:13px 16px;border:2px solid #E2E8F0;border-radius:10px;font-size:20px;font-family:'Outfit',sans-serif;font-weight:700;letter-spacing:6px;text-align:center;outline:none;transition:border .2s;color:var(--texte);}
+.inp-code:focus{border-color:var(--bleu3);}
+.inp-txt{width:100%;padding:12px 14px;border:2px solid #E2E8F0;border-radius:10px;font-size:15px;font-family:'Outfit',sans-serif;outline:none;color:var(--texte);margin-bottom:10px;transition:border .2s;}
+.inp-txt:focus{border-color:var(--bleu3);}
+.btn-v{width:100%;margin-top:14px;padding:13px;border-radius:10px;border:none;font-size:15px;font-weight:600;font-family:'Outfit',sans-serif;cursor:pointer;transition:opacity .2s;}
+.btn-v:hover{opacity:.88;}
+.bv-blue{background:var(--bleu);color:#fff;}.bv-orange{background:var(--accent);color:#fff;}.bv-red{background:#C62828;color:#fff;}
+.err{color:#C62828;font-size:12px;margin-top:8px;text-align:center;display:none;}
+.confirm-box{background:#fff;color:var(--texte);border-radius:18px;padding:32px 28px;width:100%;max-width:380px;text-align:center;animation:popIn .3s cubic-bezier(.34,1.56,.64,1) both;box-shadow:0 20px 60px rgba(0,0,0,.4);}
+.confirm-box h3{font-size:18px;font-weight:700;color:#C62828;margin-bottom:10px;}
+.confirm-box p{font-size:13.5px;color:#4A5568;line-height:1.6;margin-bottom:24px;}
+.confirm-btns{display:flex;gap:12px;justify-content:center;}
+.confirm-btns button{padding:10px 24px;border-radius:10px;font-size:14px;font-weight:600;border:none;cursor:pointer;font-family:'Outfit',sans-serif;}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:11px 24px;position:sticky;top:0;z-index:50;flex-wrap:wrap;gap:8px;}
+.topbar.blue{background:var(--bleu);}.topbar.dark{background:#0A1628;border-bottom:1px solid rgba(255,255,255,.08);}
+.topbar.light{background:#fff;border-bottom:1px solid #E2E8F0;color:var(--texte);}
+.topbar h1{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;}
+.topbar.light h1{color:var(--bleu);}
+.btn-back{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:6px 16px;border-radius:50px;font-size:12px;cursor:pointer;font-family:'Outfit',sans-serif;transition:background .2s;}
+.btn-back:hover{background:rgba(255,255,255,.22);}
+.btn-back-light{background:var(--gris);border:1px solid #E2E8F0;color:var(--texte);padding:6px 16px;border-radius:50px;font-size:12px;cursor:pointer;font-family:'Outfit',sans-serif;}
+.planning-shell{display:flex;flex-direction:column;height:calc(100vh - 52px);}
+.tabs-zone{flex-shrink:0;position:relative;}.table-zone{flex:1;overflow:auto;}
+.tabs-wrapper{position:relative;background:#0A1628;padding:10px 44px 0;}
+.tabs-bar{display:flex;overflow-x:hidden;gap:3px;scrollbar-width:none;transition:scroll .2s;}
+.tabs-bar::-webkit-scrollbar{display:none;}
+.tabs-bar .tab{flex-shrink:0;padding:7px 13px;border-radius:7px 7px 0 0;font-size:12px;font-weight:600;cursor:pointer;border:none;font-family:'Outfit',sans-serif;background:rgba(255,255,255,.07);color:rgba(255,255,255,.5);transition:background .2s,color .2s;white-space:nowrap;}
+.tabs-bar .tab:hover{background:rgba(255,255,255,.13);color:#fff;}
+.tabs-bar .tab.active{background:var(--bleu);color:#fff;}
+.tabs-bar .tab.act-tab{background:rgba(255,107,0,.12);color:rgba(255,165,0,.7);}
+.tabs-bar .tab.act-tab:hover{background:rgba(255,107,0,.22);color:rgba(255,165,0,.95);}
+.tabs-bar .tab.act-tab.active{background:var(--accent);color:#fff;}
+.tabs-bar .tab.bilan-tab{background:rgba(46,125,50,.12);color:rgba(100,200,100,.7);}
+.tabs-bar .tab.bilan-tab.active{background:#2E7D32;color:#fff;}
+.tabs-bar .sep{width:1px;background:rgba(255,255,255,.12);margin:4px 6px 0;flex-shrink:0;}
+.tabs-bar .lbl{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.3);padding:0 4px;align-self:flex-end;margin-bottom:3px;flex-shrink:0;}
+.tab-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(10,22,40,.95);border:1px solid rgba(255,255,255,.15);color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;z-index:10;transition:background .2s;user-select:none;}
+.tab-arrow:hover{background:var(--bleu);}
+.tab-arrow-left{left:4px;}.tab-arrow-right{right:4px;}
+.tab-add-btn{flex-shrink:0;padding:5px 10px;border-radius:7px 7px 0 0;font-size:18px;font-weight:700;cursor:pointer;border:1px dashed rgba(255,255,255,.25);background:transparent;color:rgba(255,255,255,.4);font-family:'Outfit',sans-serif;transition:all .2s;align-self:flex-end;margin-bottom:0;}
+.tab-add-btn:hover{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.5);}
+.mois-header{padding:10px 16px;background:#0D1F38;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;flex-shrink:0;}
+.mois-header h2{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:1px;}
+.an-badge{background:var(--accent);color:#fff;padding:3px 12px;border-radius:50px;font-size:12px;font-weight:700;}
+.macro-btns{display:flex;gap:6px;flex-wrap:wrap;}
+.mbtn{padding:7px 13px;border-radius:7px;font-size:11px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:opacity .2s,transform .15s;}
+.mbtn:hover{opacity:.85;transform:translateY(-1px);}
+.mb-o{background:#E65100;color:#fff;}.mb-b{background:var(--bleu3);color:#fff;}.mb-g{background:#2E7D32;color:#fff;}.mb-p{background:#6A1B9A;color:#fff;}.mb-r{background:#C62828;color:#fff;}
+.lock-bar{background:rgba(198,40,40,.12);border-bottom:1px solid rgba(198,40,40,.3);padding:8px 16px;font-size:12px;color:rgba(255,130,130,.9);display:flex;align-items:center;gap:8px;}
+.sync-bar{background:rgba(30,136,229,.1);border-bottom:1px solid rgba(30,136,229,.2);padding:6px 16px;font-size:11px;color:rgba(100,180,255,.8);display:flex;align-items:center;gap:8px;}
+table.tm{width:100%;border-collapse:collapse;min-width:700px;font-size:12px;}
+table.tm thead th{background:#0D1F38;color:rgba(255,255,255,.65);padding:8px 8px;text-align:left;border-bottom:2px solid rgba(255,255,255,.15);border-right:1px solid rgba(255,255,255,.12);white-space:nowrap;font-size:10px;text-transform:uppercase;letter-spacing:.06em;position:sticky;top:0;z-index:5;}
+table.tm thead th:last-child{border-right:none;}
+table.tm tbody tr{border-bottom:1px solid rgba(255,255,255,.07);}
+table.tm tbody tr.sc>td{border-top:2px solid rgba(30,136,229,.4)!important;}
+table.tm tbody td{padding:0;color:rgba(255,255,255,.85);vertical-align:top;border-right:1px solid rgba(255,255,255,.1);}
+table.tm tbody td:last-child{border-right:none;}
+table.tm tbody tr.sem-even td{background:rgba(255,255,255,.03);}
+table.tm tbody tr.sem-odd td{background:rgba(255,255,255,.07);}
+table.tm tbody tr.sem-even:hover td{background:rgba(30,136,229,.09);}
+table.tm tbody tr.sem-odd:hover td{background:rgba(30,136,229,.14);}
+td.csem{font-weight:800;color:#42A5F5;font-size:13px;width:90px;min-width:90px;text-align:center;padding:6px 4px!important;vertical-align:middle!important;border-right:2px solid rgba(30,136,229,.4)!important;line-height:1.5;}
+td.cdeb,td.cfin{text-align:center;width:42px;color:#FFB300;font-size:11px;}
+td.cdur{text-align:center;width:36px;color:rgba(255,255,255,.4);font-size:10px;}
+td.cdate{text-align:center;width:72px;font-size:10px;color:rgba(255,255,255,.4);padding:5px 4px!important;}
+.ei{background:transparent;border:none;color:rgba(255,255,255,.88);font-family:'Outfit',sans-serif;font-size:12px;width:100%;padding:5px 7px;outline:none;transition:background .15s;resize:none;display:block;box-sizing:border-box;}
+.ei:hover{background:rgba(255,255,255,.06);}
+.ei:focus{background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1.5px rgba(30,136,229,.5);}
+.ei.ro{pointer-events:none;opacity:.6;}
+.ei.admin-only{pointer-events:none;opacity:.5;cursor:not-allowed;}
+textarea.ei{overflow:hidden;min-height:28px;line-height:1.4;}
+tr.trow td{border-top:2px solid rgba(30,136,229,.25)!important;padding:7px 8px!important;}
+table.ta{width:100%;border-collapse:collapse;min-width:700px;font-size:12.5px;}
+table.ta thead th{background:#0D1F38;color:rgba(255,255,255,.65);padding:9px 10px;text-align:left;border-bottom:2px solid rgba(255,255,255,.08);white-space:nowrap;font-size:11px;text-transform:uppercase;letter-spacing:.06em;position:sticky;top:0;z-index:5;}
+table.ta tbody tr{border-bottom:1px solid rgba(255,255,255,.04);}
+table.ta tbody tr:hover{background:rgba(255,255,255,.03);}
+table.ta tbody td{padding:8px 10px;color:rgba(255,255,255,.85);vertical-align:middle;}
+table.ta tr.mr td{background:rgba(30,136,229,.1);color:#64B5F6;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:5px 10px;}
+table.ta tr.tr-tot td{background:rgba(255,107,0,.08);color:#FFB300;font-size:11px;font-weight:700;}
+.aei{background:transparent;border:none;color:rgba(255,255,255,.88);font-family:'Outfit',sans-serif;font-size:12.5px;width:100%;padding:4px 6px;border-radius:5px;outline:none;transition:background .15s;resize:none;display:block;box-sizing:border-box;}
+.aei:hover{background:rgba(255,255,255,.05);}
+.aei:focus{background:rgba(255,255,255,.09);box-shadow:0 0 0 1.5px rgba(30,136,229,.5);}
+.aei.ro{pointer-events:none;opacity:.6;}
+textarea.aei{overflow:hidden;min-height:26px;line-height:1.4;}
+.bilan-bg{min-height:100vh;background:var(--gris);color:var(--texte);}
+.bilan-wrap{max-width:900px;margin:0 auto;padding:36px 24px;}
+.bilan-wrap h2{font-size:22px;font-weight:700;color:var(--bleu);margin-bottom:4px;}
+.bcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:18px 0 24px;}
+.bc{background:#fff;border-radius:12px;padding:16px;border:1px solid #E2E8F0;text-align:center;}
+.bc .n{font-size:26px;font-weight:700;color:var(--bleu);}
+.bc .l{font-size:10.5px;color:var(--texte2);text-transform:uppercase;letter-spacing:.05em;margin-top:2px;}
+table.tb{width:100%;border-collapse:collapse;font-size:13px;}
+table.tb thead th{background:var(--bleu);color:#fff;padding:10px 12px;text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;}
+table.tb tbody tr:nth-child(even){background:#f0f4fb;}
+table.tb tbody tr:hover{background:#dce8f8;}
+table.tb tbody td{padding:8px 12px;border-bottom:1px solid #E2E8F0;}
+.nr{text-align:right;font-weight:600;color:var(--bleu);}
+.notetd{font-size:11px;color:#718096;font-style:italic;}
+.admin-bg{min-height:100vh;background:var(--gris);color:var(--texte);}
+.admin-inner{max-width:900px;margin:0 auto;padding:44px 24px;}
+.admin-inner h2{font-size:22px;font-weight:700;color:var(--bleu);margin-bottom:5px;}
+.admin-inner .st{color:var(--texte2);margin-bottom:36px;font-size:14px;}
+.agrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;}
+.acard{background:#fff;border-radius:16px;padding:26px 20px;border:1px solid #E2E8F0;cursor:pointer;transition:transform .2s,box-shadow .2s,border-color .2s;text-align:center;}
+.acard:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,63,138,.1);border-color:var(--bleu3);}
+.acard .ai{font-size:38px;margin-bottom:12px;}
+.acard h3{font-size:15px;font-weight:700;margin-bottom:6px;color:var(--texte);}
+.acard p{font-size:12px;color:var(--texte2);line-height:1.55;margin-bottom:14px;}
+.abtn{display:inline-block;padding:7px 18px;border-radius:50px;font-size:12px;font-weight:600;border:none;cursor:pointer;font-family:'Outfit',sans-serif;}
+.ab-b{background:var(--bleu);color:#fff;}.ab-o{background:var(--accent);color:#fff;}.ab-g{background:#2E7D32;color:#fff;}.ab-r{background:#C62828;color:#fff;}.ab-p{background:#6A1B9A;color:#fff;}.ab-t{background:#00695C;color:#fff;}
+.extract-bg{min-height:100vh;background:var(--gris);color:var(--texte);}
+.extract-wrap{max-width:820px;margin:0 auto;padding:44px 24px;}
+.extract-wrap h2{font-size:22px;font-weight:700;color:var(--bleu);margin-bottom:6px;}
+.extract-section{background:#fff;border-radius:16px;padding:24px;border:1px solid #E2E8F0;margin-bottom:20px;}
+.extract-section h3{font-size:16px;font-weight:700;color:var(--bleu);margin-bottom:16px;}
+.extract-btns{display:flex;flex-wrap:wrap;gap:10px;}
+.ebtn{padding:9px 18px;border-radius:9px;font-size:13px;font-weight:600;border:none;cursor:pointer;font-family:'Outfit',sans-serif;background:var(--bleu);color:#fff;transition:opacity .2s,transform .2s;display:flex;align-items:center;gap:6px;}
+.ebtn:hover{opacity:.85;transform:translateY(-1px);}
+.ebtn.green{background:#2E7D32;}.ebtn.orange{background:var(--accent);}
+.wrap{max-width:620px;margin:0 auto;padding:44px 24px;}
+.wrap h2{font-size:21px;font-weight:700;color:var(--bleu);margin-bottom:5px;}
+.wrap .st{color:var(--texte2);margin-bottom:26px;font-size:13.5px;}
+.sb{border-radius:10px;padding:12px 18px;font-size:13px;font-weight:600;margin-bottom:22px;display:flex;align-items:center;gap:10px;}
+.sb-open{background:#F0FFF4;color:#276749;border:1px solid #9AE6B4;}
+.sb-lock{background:#FFF5F5;color:#9B2C2C;border:1px solid #FEB2B2;}
+.vcard{background:#fff;border-radius:14px;padding:20px 18px;border:1px solid #E2E8F0;margin-bottom:12px;display:flex;align-items:center;gap:16px;}
+.vcard .vi{font-size:32px;flex-shrink:0;}
+.vcard h3{font-size:14px;font-weight:700;margin-bottom:3px;}
+.vcard p{font-size:12px;color:var(--texte2);line-height:1.5;}
+.vcard button{margin-left:auto;flex-shrink:0;padding:8px 16px;border-radius:9px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;border:none;cursor:pointer;transition:opacity .2s;}
+.fg{background:#fff;border-radius:12px;padding:18px;border:1px solid #E2E8F0;margin-bottom:14px;}
+.fg label{display:block;font-size:11px;font-weight:700;color:var(--texte2);margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em;}
+.fg input{width:100%;padding:10px 12px;border:2px solid #E2E8F0;border-radius:9px;font-size:15px;font-family:'Outfit',sans-serif;outline:none;color:var(--texte);transition:border .2s;}
+.fg input:focus{border-color:var(--bleu3);}
+.save-btn{padding:10px 26px;background:var(--bleu);color:#fff;border:none;border-radius:9px;font-size:13.5px;font-weight:600;font-family:'Outfit',sans-serif;cursor:pointer;}
+.save-btn:hover{opacity:.88;}
+.mf{font-size:12px;margin-bottom:10px;display:none;}
+.dark-bg{background:#0A1628;color:#fff;min-height:100vh;}
+.db-status{position:fixed;bottom:16px;right:16px;padding:8px 14px;border-radius:50px;font-size:11px;font-weight:600;z-index:100;display:flex;align-items:center;gap:6px;backdrop-filter:blur(8px);}
+.db-ok{background:rgba(46,125,50,.85);color:#fff;}
+.db-local{background:rgba(180,100,0,.85);color:#fff;}
+.db-err{background:rgba(198,40,40,.85);color:#fff;}
+.toast{position:fixed;bottom:54px;left:50%;transform:translateX(-50%) translateY(70px);background:#1A202C;color:#fff;padding:10px 22px;border-radius:50px;font-size:13px;font-weight:500;z-index:999;transition:transform .4s cubic-bezier(.34,1.56,.64,1);pointer-events:none;white-space:nowrap;}
+.toast.show{transform:translateX(-50%) translateY(0);}
+.asso-select{flex-shrink:0;align-self:flex-end;padding:7px 10px;border-radius:7px 7px 0 0;font-size:12px;font-weight:600;font-family:'Outfit',sans-serif;background:rgba(255,107,0,.14);color:#FFB74D;border:none;cursor:pointer;outline:none;max-width:200px;transition:background .2s;}
+.asso-select:hover{background:rgba(255,107,0,.26);}
+.asso-select.on{background:var(--accent);color:#fff;}
+.asso-select option{background:#0A1628;color:#fff;}
+select.ei{appearance:auto;background:#0D1F38;color:#fff;border:1px solid rgba(255,255,255,.15);border-radius:5px;padding:4px 5px;font-size:11px;width:100%;cursor:pointer;display:block;margin:2px 0;font-family:'Outfit',sans-serif;}
+select.ei:disabled{opacity:.4;cursor:not-allowed;}
+select.ei option{background:#0D1F38;color:#fff;}
+tr.conflict td{background:rgba(198,40,40,.32)!important;box-shadow:inset 3px 0 0 #FF5252;}
+tr.conflict:hover td{background:rgba(198,40,40,.45)!important;}
+.conflict-bar{background:rgba(198,40,40,.14);border-bottom:1px solid rgba(198,40,40,.4);padding:8px 16px;font-size:12px;color:#FF8A80;font-weight:600;display:flex;gap:8px;align-items:center;}
+.lieu-item{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;border:1px solid #E2E8F0;border-radius:8px;margin-bottom:6px;font-size:13px;background:#fff;}
+.lieu-item button{background:#C62828;color:#fff;border:none;border-radius:6px;padding:5px 10px;font-size:11px;cursor:pointer;font-family:'Outfit',sans-serif;}
+.lieu-cat-h{font-size:12px;font-weight:700;color:var(--bleu);margin:14px 0 6px;text-transform:uppercase;letter-spacing:.05em;}
+@media(max-width:600px){.login-card{width:100%;max-width:300px;}.vcard{flex-direction:column;text-align:center;}.vcard button{margin-left:0;}}
+
+/* === NOUVEAUX STYLES === */
+.modal-field{margin-bottom:12px;}
+.modal-field label{display:block;font-size:11px;font-weight:700;color:var(--texte2);margin-bottom:4px;text-transform:uppercase;letter-spacing:.05em;}
+.modal-field select,.modal-field input[type=email],.modal-field input[type=password],.modal-field input[type=text]{width:100%;padding:10px 12px;border:2px solid #E2E8F0;border-radius:9px;font-size:14px;font-family:'Outfit',sans-serif;outline:none;color:var(--texte);transition:border .2s;background:#fff;}
+.modal-field select:focus,.modal-field input:focus{border-color:var(--bleu3);}
+.consent-box{background:#F4F7FB;border-radius:10px;padding:14px;margin:12px 0;}
+.consent-box p{font-size:12px;color:var(--texte2);margin-bottom:10px;}
+.consent-row{display:flex;gap:8px;align-items:flex-start;margin-bottom:8px;font-size:12px;color:var(--texte);line-height:1.4;}
+.consent-row:last-child{margin-bottom:0;}
+.consent-row input[type=checkbox]{margin-top:2px;flex-shrink:0;}
+.btn-link{background:none;border:none;color:var(--bleu);font-size:12px;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;padding:0;text-decoration:underline;}
+.err-msg{color:#C62828;font-size:12px;margin-bottom:8px;display:none;padding:8px 12px;background:#FFF5F5;border-radius:8px;border:1px solid #FEB2B2;}
+</style>
+</head>
+<body>
+
+<!-- ===================== PAGES ===================== -->
+
+<!-- PAGE ACCUEIL -->
+<div id="pg-accueil" class="page active">
+<section class="hero">
+  <div class="orb orb1"></div><div class="orb orb2"></div>
+  <div class="badge">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#0050A0"/><path d="M16 6L23 12V26H19V20H13V26H9V12Z" fill="white"/><circle cx="16" cy="11" r="2.5" fill="#FF6B00"/></svg>
+    <span>Ville de Corbas — Sport</span>
+  </div>
+  <h1 class="hero-titre">Planning<br><em>Manifestations</em><br>Corbas</h1>
+  <p class="hero-sub">Saison 2026–2027 · Gérez et consultez les manifestations sportives de la ville</p>
+  <div class="cards-row">
+    <div class="login-card" onclick="openModal('asso')">
+      <span class="ci">🏆</span><h2>Vous êtes une association</h2>
+      <p>Connectez-vous avec votre compte pour accéder au planning.</p>
+      <button class="btn-cx btn-asso">Se connecter</button>
+    </div>
+    <div class="login-card" onclick="openModal('agent')">
+      <span class="ci">👤</span><h2>Vous êtes un agent</h2>
+      <p>Accès complet au planning et aux outils, hors paramètres sensibles.</p>
+      <button class="btn-cx" style="background:#2E7D32;color:#fff;">Se connecter</button>
+    </div>
+    <div class="login-card" onclick="openModal('admin')">
+      <span class="ci">🔐</span><h2>Vous êtes administrateur</h2>
+      <p>Accès complet : planning, macros, verrouillage, paramètres.</p>
+      <button class="btn-cx btn-admin">Se connecter</button>
+    </div>
+  </div>
+  <div class="sport-deco">⚽ 🏀 🏐 🎾 🏸 🥊 🏊 🎯 🤸 🏋️</div>
+</section>
+</div>
+
+<!-- PAGE PLANNING ASSO -->
+<div id="pg-asso" class="page">
+<div class="dark-bg">
+  <div class="topbar dark" style="justify-content:space-between;">
+    <h1>📋 Planning Manifestations Corbas 2026–2027</h1>
+    <div style="display:flex;gap:8px;">
+      <button class="btn-back" id="btn-prefs-asso" onclick="openModal('prefs-mail')" style="display:none;">⚙️ Mes préférences</button>
+      <button class="btn-back" onclick="deconnexion()">← Déconnexion</button>
+    </div>
+  </div>
+  <div id="asso-lock-bar" class="lock-bar" style="display:none;">🔒 Planning verrouillé — consultation uniquement.</div>
+  <div class="sync-bar" id="sync-bar-asso">🔄 Connexion...</div>
+  <div class="planning-shell">
+    <div class="tabs-zone" id="asso-tabs-zone"></div>
+    <div class="table-zone" id="asso-content"></div>
+  </div>
+</div>
+</div>
+
+<!-- PAGE PLANNING ADMIN -->
+<div id="pg-admin-planning" class="page">
+<div class="dark-bg">
+  <div class="topbar dark"><h1 id="planning-admin-titre">📋 Planning — Administrateur</h1><button class="btn-back" onclick="go('pg-admin')">← Retour admin</button></div>
+  <div class="sync-bar" id="sync-bar-admin">🔄 Connexion...</div>
+  <div class="planning-shell">
+    <div class="tabs-zone" id="admin-tabs-zone"></div>
+    <div class="table-zone" id="admin-content"></div>
+  </div>
+</div>
+</div>
+
+<!-- PAGE ADMIN HOME -->
+<div id="pg-admin" class="page">
+<div class="admin-bg">
+  <div class="topbar blue"><h1>🔐 Espace Administrateur</h1><button class="btn-back" onclick="deconnexion()">← Déconnexion</button></div>
+  <div class="admin-inner">
+    <h2>Que souhaitez-vous faire ?</h2>
+    <p class="st">Accès complet à toutes les fonctionnalités du planning sportif.</p>
+    <div class="agrid">
+      <div class="acard" onclick="ouvrirPlanningAdmin()"><div class="ai">📝</div><h3>Modifier le planning</h3><p>Tous les onglets, toutes les cellules.</p><button class="abtn ab-b">Ouvrir</button></div>
+      <div class="acard" onclick="go('pg-bilan')"><div class="ai">📊</div><h3>Bilan</h3><p>Synthèse des impacts par association.</p><button class="abtn ab-t">Voir</button></div>
+      <div class="acard" onclick="go('pg-extraction')"><div class="ai">📥</div><h3>Extraction</h3><p>Télécharger planning par mois, activité ou bilan.</p><button class="abtn ab-g">Extraire</button></div>
+      <div class="acard" onclick="go('pg-bilan-site')"><div class="ai">🗺️</div><h3>Bilan par site</h3><p>Manifestations par équipement ou salle.</p><button class="abtn ab-b">Consulter</button></div>
+      <div class="acard admin-only-card" onclick="go('pg-verrou')"><div class="ai">🔒</div><h3>Verrouiller / Déverrouiller</h3><p>Contrôler l'accès des associations.</p><button class="abtn ab-o">Gérer</button></div>
+      <div class="acard" onclick="go('pg-lieux')"><div class="ai">📍</div><h3>Gérer les lieux</h3><p>Ajouter ou supprimer les lieux du planning.</p><button class="abtn ab-b">Gérer</button></div>
+      <div class="acard" onclick="go('pg-gestion-assos')"><div class="ai">🏢</div><h3>Gestion associations</h3><p>Ajouter, supprimer ou voir les comptes créés.</p><button class="abtn ab-b">Gérer</button></div>
+      <div class="acard admin-only-card" onclick="go('pg-mdp-asso')"><div class="ai">🔑</div><h3>Code association</h3><p>Modifier le code d'accès général.</p><button class="abtn ab-g">Changer</button></div>
+      <div class="acard admin-only-card" onclick="go('pg-mdp-agent')"><div class="ai">👤</div><h3>Code agent</h3><p>Modifier le mot de passe des agents.</p><button class="abtn ab-g">Changer</button></div>
+      <div class="acard admin-only-card" onclick="go('pg-mdp-admin')"><div class="ai">🛡️</div><h3>Code administrateur</h3><p>Modifier votre propre code d'accès.</p><button class="abtn ab-p">Changer</button></div>
+      <div class="acard admin-only-card" onclick="go('pg-saisons')"><div class="ai">📅</div><h3>Gestion des saisons</h3><p>Créer ou supprimer une saison de planning.</p><button class="abtn ab-b">Gérer</button></div>
+      <div class="acard admin-only-card" onclick="confirmReset()"><div class="ai">🗑️</div><h3>Remettre à zéro</h3><p>Effacer toutes les données saisies.</p><button class="abtn ab-r">Remettre à zéro</button></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- PAGE BILAN -->
+<div id="pg-bilan" class="page">
+<div class="bilan-bg">
+  <div class="topbar light"><h1>📊 Bilan <span id="bilan-titre">2026–2027</span></h1><button class="btn-back-light" onclick="go('pg-admin')">← Retour</button></div>
+  <div class="bilan-wrap">
+    <h2>Bilan saison <span id="bilan-an">2026–2027</span></h2>
+
+    <div class="bcards" id="bilan-cards"></div>
+    <div style="overflow-x:auto;"><table class="tb"><thead><tr>
+      <th>Association</th><th style="text-align:right">Organisation</th>
+      <th style="text-align:right">Clubs impactés</th><th style="text-align:right">Total</th>
+      <th style="text-align:right">Heures</th><th>Note</th>
+    </tr></thead><tbody id="bilan-tbody"></tbody></table></div>
+  </div>
+</div>
+</div>
+
+<!-- PAGE EXTRACTION -->
+<div id="pg-extraction" class="page">
+<div class="extract-bg">
+  <div class="topbar light"><h1>📥 Extraction de données</h1><button class="btn-back-light" onclick="go('pg-admin')">← Retour</button></div>
+  <div class="extract-wrap">
+    <h2>Télécharger les données</h2>
+    <p style="color:var(--texte2);font-size:13px;margin-bottom:28px;">Format CSV compatible LibreOffice Calc.</p>
+    <div class="extract-section"><h3>📅 Par mois</h3><div class="extract-btns" id="extract-mois-btns"></div></div>
+    <div class="extract-section"><h3>🏅 Par activité</h3><div class="extract-btns" id="extract-act-btns"></div></div>
+    <div class="extract-section"><h3>📊 Bilan global</h3><div class="extract-btns"><button class="ebtn green" onclick="exportBilan()">⬇️ Télécharger le bilan</button></div></div>
+  </div>
+</div>
+</div>
+
+<!-- PAGE BILAN PAR SITE -->
+<div id="pg-bilan-site" class="page">
+<div class="admin-bg">
+  <div class="topbar blue"><h1>🗺️ Bilan par site</h1><button class="btn-back" onclick="go('pg-admin')">← Retour</button></div>
+  <div class="wrap" style="max-width:760px;">
+    <h2>Bilan par site</h2>
+    <p class="st">Sélectionnez un type de lieu, puis un site, puis un mois.</p>
+    <div class="fg"><label>Type de lieu</label>
+      <select id="bs-type" onchange="bsChangerType()" style="width:100%;padding:10px 12px;border:2px solid #E2E8F0;border-radius:9px;font-size:15px;font-family:'Outfit',sans-serif;color:var(--texte);outline:none;background:#fff;">
+        <option value="">-- Choisir un type --</option>
+        <option value="equipements">🏟️ Équipements sportifs</option>
+        <option value="salles">🏛️ Salles municipales</option>
+      </select>
+    </div>
+    <div class="fg" id="bs-site-wrap" style="display:none;"><label>Site</label>
+      <select id="bs-site" onchange="bsChangerSite()" style="width:100%;padding:10px 12px;border:2px solid #E2E8F0;border-radius:9px;font-size:15px;font-family:'Outfit',sans-serif;color:var(--texte);outline:none;background:#fff;"></select>
+    </div>
+    <div class="fg" id="bs-mois-wrap" style="display:none;"><label>Mois</label>
+      <select id="bs-mois" onchange="bsAfficher()" style="width:100%;padding:10px 12px;border:2px solid #E2E8F0;border-radius:9px;font-size:15px;font-family:'Outfit',sans-serif;color:var(--texte);outline:none;background:#fff;"></select>
+    </div>
+    <div id="bs-result" style="margin-top:20px;"></div>
+  </div>
+</div>
+</div>
+
+<!-- PAGE LIEUX -->
+<div id="pg-lieux" class="page">
+<div class="admin-bg">
+  <div class="topbar blue"><h1>📍 Gestion des lieux</h1><button class="btn-back" onclick="go('pg-admin')">← Retour</button></div>
+  <div class="wrap">
+
+    <!-- SECTION 1 : CRÉER UN LIEU -->
+    <h2>➕ Créer un lieu</h2>
+    <p class="st">Ajoutez un nouveau lieu — il apparaîtra dans le planning.</p>
+    <div class="fg"><label>Type de lieu</label>
+      <select id="lieu-type" style="width:100%;padding:10px 12px;border:2px solid #E2E8F0;border-radius:9px;font-size:15px;font-family:'Outfit',sans-serif;color:var(--texte);outline:none;background:#fff;">
+        <option value="equipements">🏟️ Équipement sportif</option>
+        <option value="salles">🏛️ Salle municipale</option>
+      </select>
+    </div>
+    <div class="fg"><label>Nom du lieu</label>
+      <input type="text" id="lieu-nom" class="inp-txt" placeholder="Ex: Gymnase Jean Jaurès..." onkeydown="if(event.key==='Enter')ajouterLieu()">
+    </div>
+    <button class="save-btn" onclick="ajouterLieu()" style="margin-bottom:36px;">➕ Ajouter ce lieu</button>
+
+    <!-- SECTION 2 : GÉRER LES LIEUX EXISTANTS -->
+    <h2>✏️ Modifier ou supprimer un lieu</h2>
+    <p class="st">Sélectionnez un type pour voir et gérer les lieux existants.</p>
+    <div class="fg"><label>Type de lieu à gérer</label>
+      <select id="lieu-gerer-type" onchange="renderLieuxGerer()" style="width:100%;padding:10px 12px;border:2px solid #E2E8F0;border-radius:9px;font-size:15px;font-family:'Outfit',sans-serif;color:var(--texte);outline:none;background:#fff;">
+        <option value="">-- Choisir un type --</option>
+        <option value="equipements">🏟️ Équipements sportifs</option>
+        <option value="salles">🏛️ Salles municipales</option>
+      </select>
+    </div>
+    <div id="lieux-gerer-liste"></div>
+
+  </div>
+</div>
+</div>
+
+<!-- PAGE VERROU -->
+<div id="pg-verrou" class="page">
+<div class="admin-bg">
+  <div class="topbar blue"><h1>🔒 Verrouillage</h1><button class="btn-back" onclick="go('pg-admin')">← Retour</button></div>
+  <div class="wrap">
+    <h2>Accès des associations</h2><p class="st">Choisissez si les associations peuvent modifier le planning.</p>
+    <div id="verrou-sb" class="sb sb-open"><span>🟢</span><span id="verrou-txt">Modification autorisée.</span></div>
+    <div class="vcard"><div class="vi">🔒</div><div><h3>Verrouiller</h3><p>Les associations passent en lecture seule.</p></div><button onclick="verrouiller()" style="background:#C62828;color:#fff;">Verrouiller</button></div>
+    <div class="vcard"><div class="vi">🔓</div><div><h3>Déverrouiller</h3><p>Les associations retrouvent l'accès en modification.</p></div><button onclick="deverrouiller()" style="background:#2E7D32;color:#fff;">Déverrouiller</button></div>
+  </div>
+</div>
+</div>
+
+<!-- PAGE MDP ASSO -->
+<div id="pg-mdp-asso" class="page">
+<div class="admin-bg">
+  <div class="topbar blue"><h1>🔑 Code Association</h1><button class="btn-back" onclick="go('pg-admin')">← Retour</button></div>
+  <div class="wrap">
+    <h2>Modifier le code association</h2><p class="st">Code général utilisé par toutes les associations sans compte.</p>
+    <div class="fg"><label>Nouveau code</label><input type="password" id="na1" class="inp-txt" placeholder="Nouveau code…"></div>
+    <div class="fg"><label>Confirmer</label><input type="password" id="na2" class="inp-txt" placeholder="Confirmer…"></div>
+    <p id="msg-na" class="mf"></p><button class="save-btn" onclick="changerMdp('asso')">Enregistrer</button>
+  </div>
+</div>
+</div>
+
+<!-- PAGE MDP AGENT -->
+<div id="pg-mdp-agent" class="page">
+<div class="admin-bg">
+  <div class="topbar blue"><h1>👤 Code Agent</h1><button class="btn-back" onclick="go('pg-admin')">← Retour</button></div>
+  <div class="wrap">
+    <h2>Modifier le code agent</h2><p class="st">Code utilisé par les agents de la ville.</p>
+    <div class="fg"><label>Nouveau code</label><input type="password" id="nagent1" class="inp-txt" placeholder="Nouveau code…"></div>
+    <div class="fg"><label>Confirmer</label><input type="password" id="nagent2" class="inp-txt" placeholder="Confirmer…"></div>
+    <p id="msg-nagent" class="mf"></p><button class="save-btn" onclick="changerMdpAgent()">Enregistrer</button>
+  </div>
+</div>
+</div>
+
+<!-- PAGE MDP ADMIN -->
+<div id="pg-mdp-admin" class="page">
+<div class="admin-bg">
+  <div class="topbar blue"><h1>🛡️ Code Administrateur</h1><button class="btn-back" onclick="go('pg-admin')">← Retour</button></div>
+  <div class="wrap">
+    <h2>Modifier le code administrateur</h2><p class="st">Votre code d'accès personnel.</p>
+    <div class="fg"><label>Nouveau code</label><input type="password" id="nadm1" class="inp-txt" placeholder="Nouveau code…"></div>
+    <div class="fg"><label>Confirmer</label><input type="password" id="nadm2" class="inp-txt" placeholder="Confirmer…"></div>
+    <p id="msg-nadm" class="mf"></p><button class="save-btn" onclick="changerMdp('admin')">Enregistrer</button>
+  </div>
+</div>
+</div>
+
+<!-- PAGE GESTION ASSOCIATIONS -->
+<div id="pg-gestion-assos" class="page">
+<div class="admin-bg">
+  <div class="topbar blue"><h1>🏢 Gestion des associations</h1><button class="btn-back" onclick="go('pg-admin')">← Retour</button></div>
+  <div class="wrap">
+    <h2>Associations du planning</h2>
+    <p class="st">Les associations listées apparaissent dans le planning et dans le formulaire de création de compte.</p>
+    <div class="fg"><label>Ajouter une association</label>
+      <input type="text" id="new-asso-input" class="inp-txt" placeholder="Nom de l'association…" maxlength="50" onkeydown="if(event.key==='Enter')ajouterAssoDuPlanning()">
+    </div>
+    <button class="save-btn" onclick="ajouterAssoDuPlanning()" style="margin-bottom:24px;">➕ Ajouter</button>
+    <h3 style="font-size:15px;font-weight:700;color:var(--bleu);margin-bottom:12px;">Liste actuelle</h3>
+    <div id="liste-assos-admin"></div>
+  </div>
+</div>
+</div>
+
+<!-- PAGE SETTINGS -->
+<div id="pg-settings" class="page">
+<div class="admin-bg">
+  <div class="topbar blue"><h1>⚙️ Paramètres</h1><button class="btn-back" onclick="go('pg-admin')">← Retour</button></div>
+  <div class="wrap">
+    <h2>Année de la saison</h2><p class="st">Modifier l'année met à jour les en-têtes.</p>
+    <div class="fg"><label>Année de début</label><input type="number" id="inp-an" min="2020" max="2060" value="2026"></div>
+    <p style="font-size:13px;color:var(--texte2);margin-bottom:16px;">Saison : <strong id="prev-saison">2026–2027</strong></p>
+    <button class="save-btn" onclick="changerAnnee()">Mettre à jour</button>
+  </div>
+</div>
+</div>
+
+<!-- ===================== MODALES ===================== -->
+
+<!-- MODALE CONNEXION ASSOCIATION -->
+<div id="modal-asso" class="modal-overlay">
+  <div class="modal">
+    <button class="modal-x" onclick="closeModal('asso')">✕</button>
+    <span class="mi">🏆</span>
+    <h3>Connexion Association</h3>
+    <p>Connectez-vous avec le nom de votre association et votre mot de passe.</p>
+    <div class="modal-field">
+      <label>Votre association</label>
+      <select id="asso-nom-select">
+        <option value="">-- Choisir votre association --</option>
+      </select>
+    </div>
+    <div class="modal-field">
+      <label>Mot de passe</label>
+      <input type="password" id="code-asso" placeholder="Votre mot de passe" onkeydown="if(event.key==='Enter')valAsso()">
+    </div>
+    <label style="display:flex;align-items:center;gap:8px;font-size:12px;color:#718096;margin-bottom:14px;cursor:pointer;">
+      <input type="checkbox" id="asso-remember"> Se souvenir de moi
+    </label>
+    <div class="err-msg" id="err-asso"></div>
+    <button class="btn-v bv-blue" onclick="valAsso()">Accéder au planning</button>
+    <hr style="margin:14px 0;border:none;border-top:1px solid #E2E8F0;">
+    <p style="font-size:12px;color:#718096;text-align:center;">
+      Pas encore de compte ?
+      <button class="btn-link" onclick="closeModal('asso');openModal('creer-compte')">Créer mon compte</button>
+    </p>
+  </div>
+</div>
+
+<!-- MODALE CONNEXION AGENT -->
+<div id="modal-agent" class="modal-overlay">
+  <div class="modal">
+    <button class="modal-x" onclick="closeModal('agent')">✕</button>
+    <span class="mi">👤</span>
+    <h3>Connexion Agent</h3>
+    <p>Entrez votre code agent pour accéder au planning.</p>
+    <div class="modal-field">
+      <label>Code agent</label>
+      <input type="password" id="code-agent" class="inp-code" placeholder="••••••" maxlength="30" onkeydown="if(event.key==='Enter')valAgent()">
+    </div>
+    <div class="err-msg" id="err-agent"></div>
+    <button class="btn-v" style="background:#2E7D32;color:#fff;" onclick="valAgent()">Accéder au planning</button>
+  </div>
+</div>
+
+<!-- MODALE CONNEXION ADMIN -->
+<div id="modal-admin" class="modal-overlay">
+  <div class="modal">
+    <button class="modal-x" onclick="closeModal('admin')">✕</button>
+    <span class="mi">🔐</span>
+    <h3>Accès Administrateur</h3>
+    <p>Entrez votre code administrateur.</p>
+    <div class="modal-field">
+      <label>Code administrateur</label>
+      <input type="password" id="code-admin" class="inp-code" placeholder="••••••" maxlength="30" onkeydown="if(event.key==='Enter')valAdmin()">
+    </div>
+    <div class="err-msg" id="err-admin"></div>
+    <button class="btn-v bv-orange" onclick="valAdmin()">Accéder à l'espace admin</button>
+  </div>
+</div>
+
+<!-- MODALE CRÉER COMPTE -->
+<div id="modal-creer-compte" class="modal-overlay">
+  <div class="modal">
+    <button class="modal-x" onclick="closeModal('creer-compte')">✕</button>
+    <span class="mi">✨</span>
+    <h3>Créer un compte</h3>
+    <p>Choisissez votre association et définissez un mot de passe.</p>
+    <div class="modal-field">
+      <label>Votre association</label>
+      <select id="cc-nom">
+        <option value="">-- Choisir votre association --</option>
+      </select>
+    </div>
+    <p style="font-size:11px;color:#718096;margin:-8px 0 12px;font-style:italic;">Si votre association n’apparaît pas, contactez les services de la ville.</p>
+    <div class="modal-field">
+      <label>Mot de passe</label>
+      <input type="password" id="cc-mdp" placeholder="Minimum 4 caractères">
+    </div>
+    <div class="modal-field">
+      <label>Confirmer le mot de passe</label>
+      <input type="password" id="cc-mdp2" placeholder="Confirmer...">
+    </div>
+    <div class="err-msg" id="err-creer-compte"></div>
+    <button class="btn-v bv-blue" onclick="creerCompteAsso()">✓ Créer mon compte</button>
+  </div>
+</div>
+
+<!-- MODALE PRÉFÉRENCES MAIL -->
+<div id="modal-prefs-mail" class="modal-overlay">
+  <div class="modal">
+    <button class="modal-x" onclick="closeModal('prefs-mail')">✕</button>
+    <span class="mi">📧</span>
+    <h3>Mes préférences</h3>
+    <p>Gérez vos options de notification par email.</p>
+    <div class="consent-box">
+      <div class="consent-row">
+        <input type="checkbox" id="pref-rappel">
+        <span>Recevoir des rappels 3 semaines avant mes manifestations</span>
+      </div>
+      <div class="consent-row">
+        <input type="checkbox" id="pref-impact">
+        <span>Recevoir des rappels sur les manifestations impactant mes activités</span>
+      </div>
+    </div>
+    <button class="btn-v bv-blue" onclick="sauvegarderPrefs()">💾 Enregistrer mes préférences</button>
+  </div>
+</div>
+
+<!-- MODALE CONFIRMATION -->
+<div id="modal-confirm" class="modal-overlay">
+  <div class="confirm-box">
+    <h3 id="confirm-title">⚠️ Confirmation</h3>
+    <p id="confirm-msg">Êtes-vous sûr ?</p>
+    <div class="confirm-btns">
+      <button style="background:#E2E8F0;color:#4A5568;" onclick="closeConfirm()">Annuler</button>
+      <button id="confirm-ok-btn" style="background:#C62828;color:#fff;">Confirmer</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODALE NOUVELLE ACTIVITÉ -->
+<div id="modal-new-act" class="modal-overlay">
+  <div class="modal">
+    <button class="modal-x" onclick="closeModal('new-act')">✕</button>
+    <span class="mi">➕</span><h3>Nouvelle activité</h3>
+    <p>Entrez le nom de la nouvelle association / activité.</p>
+    <div class="modal-field">
+      <label>Nom</label>
+      <input type="text" id="new-act-name" placeholder="Ex: Judo, Tennis, Danse…" maxlength="30">
+    </div>
+    <div class="err-msg" id="err-new-act"></div>
+    <button class="btn-v bv-blue" onclick="confirmerNouvelleAct()">✓ Créer l'onglet</button>
+  </div>
+</div>
+
+<div id="db-status" class="db-status db-local">💾 Local</div>
+<div id="toast" class="toast"></div>
+
+
+
+<script>
+const ODS = {"Septembre":{"an":2026,"num":9,"rows":[{"sem":"S1","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":1,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":2,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":3,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":4,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":5,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":6,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":7,"deb":"","fin":"","dur":"0"},{"sem":"S2","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":8,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":9,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":10,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":11,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":12,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":13,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":14,"deb":"","fin":"","dur":"0"},{"sem":"S3","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":15,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":16,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":17,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":18,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":19,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":20,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":21,"deb":"","fin":"","dur":"0"},{"sem":"S4","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":22,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":23,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":24,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":25,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":26,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":27,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":28,"deb":"","fin":"","dur":"0"},{"sem":"S5","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":29,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":30,"deb":"","fin":"","dur":"0"}]},"Octobre":{"an":2026,"num":10,"rows":[{"sem":"S1","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":1,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":2,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":3,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":4,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":5,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":6,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":7,"deb":"","fin":"","dur":"0"},{"sem":"S2","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":8,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":9,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":10,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":11,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":12,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":13,"deb":"","fin":"","dur":"0"},{"sem":"S3","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":14,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":15,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":16,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":17,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":18,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":19,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":20,"deb":"","fin":"","dur":"0"},{"sem":"S4","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":21,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":22,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":23,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":24,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":25,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":26,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":27,"deb":"","fin":"","dur":"0"},{"sem":"S5","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":28,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":29,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":30,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":31,"deb":"","fin":"","dur":"0"}]},"Novembre":{"an":2026,"num":11,"rows":[{"sem":"S1","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":1,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":2,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":3,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":4,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":5,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":6,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":7,"deb":"","fin":"","dur":"0"},{"sem":"S2","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":8,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":9,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":10,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":11,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":12,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":13,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":14,"deb":"","fin":"","dur":"0"},{"sem":"S3","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":15,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":16,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":17,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":18,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":19,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":20,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":21,"deb":"","fin":"","dur":"0"},{"sem":"S4","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":22,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":23,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":24,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":25,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":26,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":27,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":28,"deb":"","fin":"","dur":"0"},{"sem":"S5","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":29,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":30,"deb":"","fin":"","dur":"0"}]},"Décembre":{"an":2026,"num":12,"rows":[{"sem":"S1","org":"Comité des fêtes","manif":"Marché de Noël – Sam 5 et Dim 6 déc – Gymnase Jean Jaurès","ddate":"2026-05-27","trait":"","rem":"Samedi dès 8h grande salle et dimanche 8h–23h","clubs":"","jour":"mardi","num":1,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":2,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":3,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":4,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":5,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":6,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":7,"deb":"","fin":"","dur":"0"},{"sem":"S2","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":8,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":9,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":10,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":11,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":12,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":13,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":14,"deb":"","fin":"","dur":"0"},{"sem":"S3","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":15,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":16,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":17,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":18,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":19,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":20,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":21,"deb":"","fin":"","dur":"0"},{"sem":"S4","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":22,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":23,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":24,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":25,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":26,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":27,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":28,"deb":"","fin":"","dur":"0"},{"sem":"S5","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":29,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":30,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":31,"deb":"","fin":"","dur":"0"}]},"Janvier":{"an":2027,"num":1,"rows":[{"sem":"S1","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":1,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":2,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":3,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":4,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":5,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":6,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":7,"deb":"","fin":"","dur":"0"},{"sem":"S2","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":8,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":9,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":10,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":11,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":12,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":13,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":14,"deb":"","fin":"","dur":"0"},{"sem":"S3","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":15,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":16,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":17,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":18,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":19,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":20,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":21,"deb":"","fin":"","dur":"0"},{"sem":"S4","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":22,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":23,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":24,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":25,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":26,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":27,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":28,"deb":"","fin":"","dur":"0"},{"sem":"S5","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":29,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":30,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":31,"deb":"","fin":"","dur":"0"}]},"Février":{"an":2027,"num":2,"rows":[{"sem":"S1","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":1,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":2,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":3,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":4,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":5,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":6,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":7,"deb":"","fin":"","dur":"0"},{"sem":"S2","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":8,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":9,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":10,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":11,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":12,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":13,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":14,"deb":"","fin":"","dur":"0"},{"sem":"S3","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":15,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":16,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":17,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":18,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":19,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":20,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":21,"deb":"","fin":"","dur":"0"},{"sem":"S4","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":22,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":23,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":24,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":25,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":26,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":27,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":28,"deb":"","fin":"","dur":"0"}]},"Mars":{"an":2027,"num":3,"rows":[{"sem":"S1","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":1,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":2,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":3,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":4,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":5,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":6,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":7,"deb":"","fin":"","dur":"0"},{"sem":"S2","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":8,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":9,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":10,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":11,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":12,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":13,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":14,"deb":"","fin":"","dur":"0"},{"sem":"S3","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":15,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":16,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":17,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":18,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":19,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":20,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":21,"deb":"","fin":"","dur":"0"},{"sem":"S4","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":22,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":23,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":24,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":25,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":26,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":27,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":28,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":29,"deb":"","fin":"","dur":"0"},{"sem":"S5","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":30,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":31,"deb":"","fin":"","dur":"0"}]},"Avril":{"an":2027,"num":4,"rows":[{"sem":"S1","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":1,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":2,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":3,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":4,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":5,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":6,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":7,"deb":"","fin":"","dur":"0"},{"sem":"S2","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":8,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":9,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":10,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":11,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":12,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":13,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":14,"deb":"","fin":"","dur":"0"},{"sem":"S3","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":15,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":16,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":17,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":18,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":19,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":20,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":21,"deb":"","fin":"","dur":"0"},{"sem":"S4","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":22,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":23,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":24,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":25,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":26,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":27,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":28,"deb":"","fin":"","dur":"0"},{"sem":"S5","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":29,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":30,"deb":"","fin":"","dur":"0"}]},"Mai":{"an":2027,"num":5,"rows":[{"sem":"S1","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":1,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":2,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":3,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":4,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":5,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":6,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":7,"deb":"","fin":"","dur":"0"},{"sem":"S2","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":8,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":9,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":10,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":11,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":12,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":13,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":14,"deb":"","fin":"","dur":"0"},{"sem":"S3","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":15,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":16,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":17,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":18,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":19,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":20,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":21,"deb":"","fin":"","dur":"0"},{"sem":"S4","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":22,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":23,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":24,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":25,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":26,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":27,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":28,"deb":"","fin":"","dur":"0"},{"sem":"S5","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":29,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":30,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":31,"deb":"","fin":"","dur":"0"}]},"Juin":{"an":2027,"num":6,"rows":[{"sem":"S1","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":1,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":2,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":3,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":4,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":5,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":6,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":7,"deb":"","fin":"","dur":"0"},{"sem":"S2","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":8,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":9,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":10,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":11,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":12,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":13,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":14,"deb":"","fin":"","dur":"0"},{"sem":"S3","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":15,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":16,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":17,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":18,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":19,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":20,"deb":"","fin":"","dur":"0"},{"sem":"S4","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":21,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":22,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":23,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":24,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":25,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":26,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":27,"deb":"","fin":"","dur":"0"},{"sem":"S5","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":28,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":29,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":30,"deb":"","fin":"","dur":"0"}]},"Juillet":{"an":2027,"num":7,"rows":[{"sem":"S1","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":1,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":2,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":3,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":4,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":5,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":6,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":7,"deb":"","fin":"","dur":"0"},{"sem":"S2","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":8,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":9,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":10,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":11,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":12,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":13,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":14,"deb":"","fin":"","dur":"0"},{"sem":"S3","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":15,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":16,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":17,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":18,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":19,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":20,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":21,"deb":"","fin":"","dur":"0"},{"sem":"S4","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":22,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":23,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":24,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":25,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":26,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":27,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":28,"deb":"","fin":"","dur":"0"},{"sem":"S5","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":29,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":30,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":31,"deb":"","fin":"","dur":"0"}]},"Aout":{"an":2027,"num":8,"rows":[{"sem":"S1","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":1,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":2,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":3,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":4,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":5,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":6,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":7,"deb":"","fin":"","dur":"0"},{"sem":"S2","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":8,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":9,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":10,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":11,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":12,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":13,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":14,"deb":"","fin":"","dur":"0"},{"sem":"S3","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":15,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":16,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":17,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":18,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":19,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":20,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":21,"deb":"","fin":"","dur":"0"},{"sem":"S4","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":22,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":23,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":24,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mercredi","num":25,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"jeudi","num":26,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"vendredi","num":27,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"samedi","num":28,"deb":"","fin":"","dur":"0"},{"sem":"S5","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"dimanche","num":29,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"lundi","num":30,"deb":"","fin":"","dur":"0"},{"sem":"","org":"","manif":"","ddate":"","trait":"","rem":"","clubs":"","jour":"mardi","num":31,"deb":"","fin":"","dur":"0"}]}};
+
+const MOIS=['Septembre','Octobre','Novembre','Décembre','Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Aout'];
+const ACTS_DEFAULT=['Handball','GV','Badminton','Escrime','Full','Escalade','Volley','TT','Gym','Boxe','Squash','Archers','Foot','GR','Basket','Karaté','Judo','Tennis','Boule','Petanque','Echecs','AMCR','Ultimate','VTT','Velo','Running','PAJ','Périscolaire','EMS','EPS','VILLE','IME','CTM','UNSS'];
+
+const NOTES={'Escalade':'Impacts sans annulation','GR':"Uniquement J.Jaurès samedi — bientôt plus d'impact (nouvelle salle)"};
+
+const LIEUX_DEFAULT={equipements:['Gymnase Alice Milliat','Gymnase Jean Jaurès','Gymnase Jean Falcot','Gymnase des Roses','Le Taillis intérieur','Le Taillis extérieur'],salles:[]};
+
+
+
+
+const SUPABASE_URL = 'https://nvufzwdwhearlwdcezsn.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_Ts29xuGykGP-xQ7R5ldKYg_J8Ywxnwl';
+// Identifiant unique de cet onglet/navigateur : permet d'ignorer ses propres mises à jour temps réel
+const CLIENT_ID = Math.random().toString(36).slice(2) + Date.now().toString(36);
+let supabaseClient = null;
+let useDB = false;
+let pendingRemote = false; // une mise à jour distante attend que l'utilisateur finisse de taper
+
+async function initSupabase(){
+  try {
+    const { createClient } = await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm');
+    supabaseClient = createClient(SUPABASE_URL, SUPABASE_KEY);
+    const { error } = await supabaseClient.from('planning').select('id').limit(1);
+    if(error) throw error;
+    useDB = true; setDBStatus('ok'); await loadFromDB();
+    subscribeRealtime();
+  } catch(e){ console.warn('Supabase erreur:', e.message); setDBStatus('err'); }
+}
+
+// ===== TEMPS RÉEL : reçoit les modifications des autres utilisateurs =====
+function subscribeRealtime(){
+  supabaseClient.channel('planning-realtime')
+    .on('postgres_changes',
+      { event:'*', schema:'public', table:'planning', filter:'id=eq.main' },
+      (p)=>{ if(p.new && p.new.payload) applyRemote(p.new.payload); })
+    .subscribe((status)=>{ if(status==='SUBSCRIBED') setDBStatus('live'); });
+}
+
+function applyRemote(d){
+  if(!d || d._client === CLIENT_ID) return; // ignorer nos propres sauvegardes
+  if(d.mois) S.mois=d.mois; if(d.act) S.act=d.act; if(d.acts_list) S.acts_list=d.acts_list;
+  if(d.verrou!==undefined) S.verrou=d.verrou; if(d.annee) S.annee=d.annee;
+  if(d.mdpAsso) S.mdpAsso=d.mdpAsso; if(d.mdpAdmin) S.mdpAdmin=d.mdpAdmin;
+  if(d.lieux) S.lieux=d.lieux;
+  saveLocal();
+  // Si l'utilisateur est en train de taper dans une cellule, on n'interrompt pas :
+  // les données sont à jour en mémoire, le rafraîchissement visuel attendra la fin de saisie
+  const ae=document.activeElement;
+  const editing = ae && (ae.tagName==='TEXTAREA'||ae.tagName==='INPUT') && (ae.classList.contains('ei')||ae.classList.contains('aei'));
+  if(editing){ pendingRemote=true; return; }
+  refreshCurrentView(true);
+}
+
+// Quand l'utilisateur quitte une cellule, applique les mises à jour en attente
+// (modifs distantes ou ajout d'une ligne de semaine)
+let pendingExtend = false;
+document.addEventListener('focusout',()=>{ setTimeout(()=>{
+  if(!pendingRemote && !pendingExtend) return;
+  const ae=document.activeElement;
+  const editing = ae && (ae.tagName==='TEXTAREA'||ae.tagName==='INPUT') && (ae.classList.contains('ei')||ae.classList.contains('aei'));
+  if(!editing){
+    const notif=pendingRemote;
+    pendingRemote=false; pendingExtend=false;
+    refreshCurrentView(notif);
+  }
+},200); });
+
+function refreshCurrentView(notify){
+  if(document.getElementById('pg-asso').classList.contains('active')){
+    document.getElementById('asso-lock-bar').style.display=S.verrou?'flex':'none';
+    rebuildTabsKeep('asso-tabs-zone','asso-content',false);
+  }
+  if(document.getElementById('pg-admin-planning').classList.contains('active')){
+    rebuildTabsKeep('admin-tabs-zone','admin-content',true);
+  }
+  if(document.getElementById('pg-bilan').classList.contains('active')) renderBilan();
+  if(document.getElementById('pg-verrou').classList.contains('active')) majVerrou();
+  if(document.getElementById('pg-lieux').classList.contains('active')) renderLieuxListe();
+  if(notify) toast('🔄 Mise à jour reçue d\'un autre utilisateur');
+}
+
+// Reconstruit les onglets en conservant la vue actuellement sélectionnée
+function rebuildTabsKeep(zoneId,cid,isAdmin){
+  const keep=currentIdx;
+  buildTabs(zoneId,cid,isAdmin);
+  const bar=document.getElementById('tabs-bar-'+zoneId);
+  if(!bar) return;
+  const tabs=bar.querySelectorAll('.tab'); // 12 mois + bilan
+  const nbA=S.acts_list.length;
+  if(keep>0&&keep<MOIS.length){
+    tabs.forEach(t=>t.classList.remove('active'));
+    tabs[keep].classList.add('active');
+    currentIdx=keep;renderTab(cid,keep,isAdmin);
+  } else if(keep>=MOIS.length&&keep<MOIS.length+nbA){
+    tabs.forEach(t=>t.classList.remove('active'));
+    const sel=document.getElementById('asso-sel-'+zoneId);
+    if(sel){sel.value=S.acts_list[keep-MOIS.length];sel.classList.add('on');}
+    currentIdx=keep;renderTab(cid,keep,isAdmin);
+  } else if(keep>=MOIS.length+nbA){
+    tabs.forEach(t=>t.classList.remove('active'));
+    tabs[tabs.length-1].classList.add('active');
+    currentIdx=MOIS.length+nbA;renderTab(cid,currentIdx,isAdmin);
+  }
+}
+
+function setDBStatus(s){
+  const el=document.getElementById('db-status');
+  if(s==='live'){el.className='db-status db-ok';el.textContent='🟢 Synchro temps réel active';}
+  else if(s==='ok'){el.className='db-status db-ok';el.textContent='🟢 Base de données partagée';}
+  else if(s==='local'){el.className='db-status db-local';el.textContent='💾 Stockage local';}
+  else{el.className='db-status db-err';el.textContent='🔴 Erreur BDD — mode local';}
+  const shared=(s==='ok'||s==='live');
+  const msg=s==='live'?'🟢 Temps réel actif — les modifications des autres apparaissent automatiquement'
+    :(s==='ok'?'🟢 Données partagées — visibles par tous':'⚠️ Mode local — données non partagées');
+  ['asso','admin'].forEach(t=>{const b=document.getElementById('sync-bar-'+t);if(b){b.textContent=msg;b.style.background=shared?'rgba(46,125,50,.15)':'rgba(180,100,0,.12)';}});
+}
+
+async function loadFromDB(){
+  if(!useDB) return;
+  try {
+    const {data,error}=await supabaseClient.from('planning').select('*').eq('id','main').single();
+    if(error||!data) return;
+    const d=data.payload;
+    if(d.mois) S.mois=d.mois; if(d.act) S.act=d.act; if(d.acts_list) S.acts_list=d.acts_list;
+    if(d.verrou!==undefined) S.verrou=d.verrou; if(d.annee) S.annee=d.annee;
+    if(d.mdpAsso) S.mdpAsso=d.mdpAsso; if(d.mdpAdmin) S.mdpAdmin=d.mdpAdmin;
+    if(d.mdpAgent) S.mdpAgent=d.mdpAgent;
+    if(d.lieux) S.lieux=d.lieux;
+    if(d.comptes) S.comptes=d.comptes;
+    if(d.saisons) S.saisons=d.saisons;
+    saveLocal();
+    // Si la page bilan est active, la rafraîchir avec les nouvelles données
+    if(document.getElementById('pg-bilan')&&document.getElementById('pg-bilan').classList.contains('active')){
+      renderBilan();
+    }
+    toast('✅ Données chargées depuis la base partagée !');
+  } catch(e){ console.warn('loadFromDB error:',e); }
+}
+
+async function saveToDB(){
+  if(!useDB){saveLocal();return;}
+  saveLocal();
+  try {
+    const{error}=await supabaseClient.from('planning').upsert({
+      id:'main',
+      payload:{mois:S.mois,act:S.act,acts_list:S.acts_list,verrou:S.verrou,annee:S.annee,mdpAsso:S.mdpAsso,mdpAdmin:S.mdpAdmin,mdpAgent:S.mdpAgent,comptes:S.comptes,saisons:S.saisons,lieux:S.lieux,_client:CLIENT_ID},
+      updated_at:new Date().toISOString()
+    });
+    if(error) throw error;
+  } catch(e){ console.warn('saveToDB error:',e); setDBStatus('err'); }
+}
+
+let confirmCallback = null;
+document.getElementById('confirm-ok-btn').addEventListener('click',()=>{closeConfirm();if(confirmCallback)confirmCallback();});
+
+function ouvrirPlanningAdmin(){buildTabs('admin-tabs-zone','admin-content',true);go('pg-admin-planning');}
+
+let currentCid='',currentIdx=0,currentIsAdmin=false;
+
+function buildTabs(zoneId,cid,isAdmin){
+  const zone=document.getElementById(zoneId);
+  let h='<span class="lbl">Mois</span>';
+  MOIS.forEach((m,i)=>h+=`<button class="tab${i===0?' active':''}" onclick="swTab('${zoneId}','${cid}',${i},this,${isAdmin})">${m}</button>`);
+  h+='<span class="sep"></span>';
+  h+=`<select class="asso-select" id="asso-sel-${zoneId}" onchange="swActSel('${zoneId}','${cid}',this,${isAdmin})">
+    <option value="" selected>🏅 Votre association…</option>
+    ${S.acts_list.map(a=>`<option value="${x(a)}">${x(a)}</option>`).join('')}
+  </select>`;
+  h+=`<button class="tab-add-btn" onclick="openModal('new-act')" title="Ajouter une association">＋</button>`;
+  h+='<span class="sep"></span>';
+  const bi=MOIS.length+S.acts_list.length;
+
+  zone.innerHTML=`<div class="tabs-wrapper">
+    <button class="tab-arrow tab-arrow-left" onclick="scrollTabs('${zoneId}',-1)">‹</button>
+    <div class="tabs-bar" id="tabs-bar-${zoneId}">${h}</div>
+    <button class="tab-arrow tab-arrow-right" onclick="scrollTabs('${zoneId}',1)">›</button>
+  </div>`;
+  currentCid=cid;currentIsAdmin=isAdmin;currentIdx=0;
+  renderTab(cid,0,isAdmin);
+}
+function scrollTabs(zoneId,dir){const b=document.getElementById('tabs-bar-'+zoneId);if(b)b.scrollLeft+=dir*200;}
+function swTab(zoneId,cid,idx,btn,isAdmin){
+  const b=document.getElementById('tabs-bar-'+zoneId);
+  if(b) b.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  const sel=document.getElementById('asso-sel-'+zoneId);
+  if(sel){sel.value='';sel.classList.remove('on');}
+  currentCid=cid;currentIdx=idx;currentIsAdmin=isAdmin;
+  renderTab(cid,idx,isAdmin);
+}
+function swActSel(zoneId,cid,sel,isAdmin){
+  const nom=sel.value;
+  if(!nom){sel.classList.remove('on');return;}
+  sel.classList.add('on');
+  const b=document.getElementById('tabs-bar-'+zoneId);
+  if(b) b.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  currentCid=cid;currentIsAdmin=isAdmin;
+  currentIdx=MOIS.length+S.acts_list.indexOf(nom);
+  renderTab(cid,currentIdx,isAdmin);
+}
+function renderTab(cid,idx,isAdmin){
+  if(idx<MOIS.length) renderMois(cid,MOIS[idx],isAdmin);
+  else if(idx<MOIS.length+S.acts_list.length) renderAct(cid,S.acts_list[idx-MOIS.length],isAdmin);
+  else renderBilanInline(cid,isAdmin);
+}
+
+function confirmerNouvelleAct(){
+  const nom=document.getElementById('new-act-name').value.trim();
+  const err=document.getElementById('err-new-act');
+  if(!nom||S.acts_list.includes(nom)){err.style.display='block';return;}
+  err.style.display='none';
+  S.acts_list.push(nom);
+  if(!S.act[nom]) S.act[nom]=[];
+  saveA();closeModal('new-act');
+  if(document.getElementById('pg-asso').classList.contains('active')) buildTabs('asso-tabs-zone','asso-content',false);
+  if(document.getElementById('pg-admin-planning').classList.contains('active')) buildTabs('admin-tabs-zone','admin-content',true);
+  toast('✅ Activité "'+nom+'" ajoutée !');
+}
+function supprimerAct(nom){
+  showConfirm('⚠️ Supprimer "'+nom+'"','Êtes-vous sûr ? Les données seront perdues.',()=>{
+    S.acts_list=S.acts_list.filter(a=>a!==nom);delete S.act[nom];saveA();
+    buildTabs(currentIsAdmin?'admin-tabs-zone':'asso-tabs-zone',currentCid,currentIsAdmin);
+    toast('🗑️ Onglet "'+nom+'" supprimé.');
+  });
+}
+
+function renderMois(cid,mois,isAdmin){
+  const d=S.mois[mois],lk=S.verrou&&!isAdmin,ro=lk?' ro':'';
+  const isAsso = currentUser && currentUser.role==='asso';
+  const conf=computeConflicts();
+  let mbtn='';
+  const semaines=[];let cur=null;
+  d.rows.forEach((r,ri)=>{
+    if(r.sem){cur={label:r.sem,rows:[]};semaines.push(cur);}
+    if(!cur){cur={label:'',rows:[]};semaines.push(cur);}
+    cur.rows.push({...r,ri});
+  });
+  semaines.forEach(s=>{s.vis=visibleRowsForWeek(s.rows);});
+  const total=Math.round(d.rows.reduce((s,r)=>s+(parseFloat(r.dur)||0),0)*10)/10;
+  let confMois=0;conf.forEach(k=>{if(k.split('|')[0]===mois)confMois++;});
+  let rows='';
+  semaines.forEach((s,si)=>{
+    s.rows.slice(0,s.vis).forEach((r,li)=>{
+      const isF=li===0;
+      const weekRange = isF && s.label ? getWeekRange(mois, s.label) : '';
+      // Calculer le rowspan en excluant les lignes Particulier masquées
+      const nbParticulier = isAsso ? s.rows.slice(0,s.vis).filter(rr=>(rr.org||'').trim().toLowerCase()==='particulier').length : 0;
+      const rowspanReel = s.vis - nbParticulier;
+      const sc=isF?`<td class="csem" rowspan="${rowspanReel}" title="${weekRange}" style="cursor:default;">
+        <div>${s.label}</div>
+        ${weekRange?`<div style="font-size:11px;color:rgba(100,180,255,.85);font-weight:400;white-space:normal;margin-top:4px;line-height:1.4;">${weekRange}</div>`:''}
+      </td>`:'';
+      const ri2=r.ri;
+      // Calculer si cette ligne est verrouillée pour cette asso
+      const roAsso = isAsso && r.org && r.org.trim().toLowerCase() !== (currentUser.nom||'').trim().toLowerCase() ? ' ro' : '';
+      const roFinal = ro + roAsso;
+      // Masquer les lignes "Particulier" pour les associations
+      const hideParticulier = !isAdmin && currentUser && currentUser.role==='asso' && (r.org||'').trim().toLowerCase()==='particulier';
+      const isConf=conf.has(mois+'|'+ri2);
+      rows+=`<tr data-crow="${mois}|${ri2}" class="sem-${si%2===0?'even':'odd'}${isF?' sc':''}${isConf?' conflict':''}" style="${hideParticulier?'display:none;':''}">
+        ${sc}
+        <td><textarea class="ei${roFinal}" rows="1" onInput="autoGrow(this)"
+          onchange="upMField('${mois}',${ri2},'org',this.value);autoSync('${mois}',${ri2})"
+          style="min-width:80px" ${currentUser&&currentUser.role==='asso'?'readonly style="cursor:default;opacity:.7;"':''}>${x(r.org)}</textarea>
+          <span data-org="${mois}-${ri2}" style="display:none;">${x(r.org)}</span></td>
+        <td><textarea class="ei${roFinal}" rows="1" onInput="autoGrow(this)"
+          onchange="upMField('${mois}',${ri2},'manif',this.value);autoSync('${mois}',${ri2})"
+          style="min-width:160px">${x(r.manif)}</textarea></td>
+        <td><textarea class="ei${roFinal}" rows="2" onchange="upDateField('${mois}',${ri2},this)"
+          placeholder="jj/mm/aaaa"
+          style="width:78px;text-align:center;resize:none;line-height:1.3;font-size:11px;">${x(r.date)}</textarea></td>
+        <td style="min-width:150px;">${lieuSelects(mois,ri2,r,lk)}</td>
+        <td><input class="ei${roFinal}" value="${x(r.deb)}" placeholder="ex: 14h"
+          onchange="upHeureField('${mois}',${ri2},'deb',this)"
+          style="width:52px;text-align:center"></td>
+        <td><input class="ei${roFinal}" value="${x(r.fin)}" placeholder="ex: 18h"
+          onchange="upHeureField('${mois}',${ri2},'fin',this)"
+          style="width:52px;text-align:center"></td>
+        <td class="cdate">${r.ddate||'—'}</td>
+        <td><select class="ei${isAdmin?'':' admin-only'}"
+          ${isAdmin?`onchange="upMField('${mois}',${ri2},'trait',this.value)"`:'disabled'}
+          style="min-width:130px;font-size:11px;padding:3px 4px;background:transparent;border:1px solid rgba(255,255,255,.15);border-radius:6px;color:rgba(255,255,255,.88);font-family:'Outfit',sans-serif;cursor:${isAdmin?'pointer':'default'};">
+          <option value="" ${!r.trait?'selected':''} style="background:#0D1F38;">— Aucun —</option>
+          <option value="À l'étude" ${r.trait==="À l'étude"?'selected':''} style="background:#0D1F38;">🔍 À l'étude</option>
+          <option value="Date confirmée" ${r.trait==='Date confirmée'?'selected':''} style="background:#0D1F38;">📅 Date confirmée</option>
+          <option value="Date confirmée - docs en attente" ${r.trait==='Date confirmée - docs en attente'?'selected':''} style="background:#0D1F38;">📄 Date confirmée - docs en attente</option>
+          <option value="Validation définitive" ${r.trait==='Validation définitive'?'selected':''} style="background:#0D1F38;">✅ Validation définitive</option>
+          <option value="Refus" ${r.trait==='Refus'?'selected':''} style="background:#0D1F38;">❌ Refus</option>
+        </select></td>
+        <td><textarea class="ei${roFinal}" rows="1" onInput="autoGrow(this)"
+          onchange="upMField('${mois}',${ri2},'rem',this.value);autoSync('${mois}',${ri2})"
+          style="min-width:120px">${x(r.rem)}</textarea></td>
+        <td><input class="ei${roFinal}" value="${x(r.clubs)}"
+          onchange="upMField('${mois}',${ri2},'clubs',this.value);autoSync('${mois}',${ri2})"
+          style="min-width:70px"></td>
+        <td class="cdur" id="dur-${mois}-${ri2}" style="text-align:center;padding:5px;">${r.dur||'0'}</td>
+      </tr>`;
+    });
+  });
+  document.getElementById(cid).innerHTML=`
+  <div class="mois-header">
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <h2>${mois.toUpperCase()} <span class="an-badge">${d.an}</span></h2>
+      ${lk?'<span style="background:rgba(198,40,40,.2);color:#FC8181;padding:2px 10px;border-radius:50px;font-size:11px;font-weight:700;">🔒 Lecture seule</span>':''}
+    </div>${mbtn}
+  </div>
+  <div class="conflict-bar" data-mois="${mois}" style="display:${confMois?'flex':'none'};">⚠️ ${confMois} ligne(s) en conflit ce mois-ci : même date, même lieu, horaires qui se chevauchent — arbitrage nécessaire.</div>
+  <div style="overflow:auto;flex:1;"><table class="tm">
+    <thead><tr>
+      <th style="width:34px">Sem.</th>
+      <th style="min-width:80px">Organisateur<br><span style="font-weight:400;font-size:9px;opacity:.6;font-style:italic;">(saisie automatique)</span></th>
+      <th style="min-width:160px">Manifestation</th>
+      <th style="width:86px">Date</th>
+      <th style="min-width:150px">Lieu</th>
+      <th style="width:54px">Début</th>
+      <th style="width:54px">Fin</th>
+      <th style="width:72px">Date demande</th>
+      <th style="min-width:55px;max-width:68px;font-size:9px;line-height:1.3;">Traitement<br><span style="font-weight:400;opacity:.65;font-size:8px;">(réservé service sports)</span></th>
+      <th style="min-width:120px">Remarque</th>
+      <th style="min-width:70px">Clubs impactés</th>
+      <th style="width:40px">Dur.</th>
+    </tr></thead>
+    <tbody>${rows}
+    <tr class="trow">
+      <td colspan="11" style="text-align:right;font-size:10px;color:rgba(255,255,255,.4);padding:7px 8px;">Total heures du mois :</td>
+      <td class="cdur" style="font-weight:800;color:#FFB300;font-size:13px;padding:7px;">${total}h</td>
+    </tr></tbody>
+  </table></div>`;
+  setTimeout(()=>document.querySelectorAll('#'+cid+' textarea.ei').forEach(autoGrow),10);
+}
+
+// Calcule les dates de début et fin d'une semaine dans un mois
+function getWeekRange(mois, semLabel){
+  const d = S.mois[mois];
+  const rows = d.rows;
+  const MOIS_ABREV={'Septembre':'sep','Octobre':'oct','Novembre':'nov',
+    'Décembre':'déc','Janvier':'jan','Février':'fév',
+    'Mars':'mar','Avril':'avr','Mai':'mai','Juin':'jun','Juillet':'jul','Aout':'aoû'};
+  const abrev = MOIS_ABREV[mois] || mois.substring(0,3).toLowerCase();
+  const semaines = [];
+  let i = 0;
+  while(i < rows.length){
+    const debut = rows[i];
+    let j = i;
+    while(j < rows.length && rows[j].jour !== 'dimanche') j++;
+    const fin = rows[Math.min(j, rows.length-1)];
+    semaines.push({ debut, fin });
+    i = j + 1;
+  }
+  const semIdx = parseInt(semLabel.replace('S','')) - 1;
+  const sem = semaines[semIdx];
+  if(!sem) return '';
+  const fj = sem.debut.jour.substring(0,3);
+  const lj = sem.fin.jour.substring(0,3);
+  if(sem.debut.num === sem.fin.num) return `${fj} ${sem.debut.num} ${abrev}`;
+  return `${fj} ${sem.debut.num} → ${lj} ${sem.fin.num} ${abrev}`;
+}
+function todayStr(){
+  const d=new Date();
+  return String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')+'/'+d.getFullYear();
+}
+
+function upMField(mois,ri,field,val){
+  if(!S.mois[mois].rows[ri]) return;
+  const r=S.mois[mois].rows[ri];
+
+  // Asso : ne peut pas modifier l'organisateur directement
+  if(field==='org' && currentUser && currentUser.role==='asso') return;
+
+  // Asso : ne peut modifier que ses propres lignes
+  if(currentUser && currentUser.role==='asso'){
+    // Si la ligne appartient à quelqu'un d'autre (org rempli et différent du user)
+    if(r.org && r.org.trim().toLowerCase() !== currentUser.nom.trim().toLowerCase()){
+      toast('❌ Vous ne pouvez modifier que vos propres lignes.');
+      return;
+    }
+    // Si la ligne a une manifestation saisie par quelqu'un d'autre
+    if(!r.org && r.manif && field !== 'manif'){
+      toast('❌ Vous ne pouvez modifier que vos propres lignes.');
+      return;
+    }
+  }
+
+  r[field]=val;
+
+  // Asso : auto-remplir org quand elle saisit dans manif
+  if(field==='manif' && currentUser && currentUser.role==='asso' && String(val).trim()){
+    if(!r.org) r.org = currentUser.nom;
+    // Mettre à jour la cellule org visuellement
+    const orgEl = document.querySelector('[data-org="'+mois+'-'+ri+'"]');
+    if(orgEl) orgEl.textContent = currentUser.nom;
+  }
+  const champs=['org','manif','rem','clubs','date','lieu','deb','fin'];
+  if(!r.ddate&&champs.includes(field)&&String(val).trim()){
+    r.ddate=todayStr();
+    const dateEl=document.querySelector(`#dur-${mois}-${ri}`)?.closest('tr')?.querySelector('.cdate');
+    if(dateEl) dateEl.textContent=r.ddate;
+  }
+  if(champs.includes(field)){
+    const toutVide=champs.every(c=>!(r[c]||'').trim());
+    if(toutVide){
+      r.ddate='';
+      const dateEl=document.querySelector(`#dur-${mois}-${ri}`)?.closest('tr')?.querySelector('.cdate');
+      if(dateEl) dateEl.textContent='—';
+    }
+  }
+  if(field==='deb'||field==='fin'){
+    const dd=parseHeure(r.deb),ff=parseHeure(r.fin);
+    r.dur=(dd!==null&&ff!==null&&ff>dd)?String(Math.round((ff-dd)*100)/100):'0';
+    const el=document.getElementById(`dur-${mois}-${ri}`);
+    if(el) el.textContent=r.dur;
+  }
+  saveM();
+  if(champs.includes(field)) maybeExtend(mois);
+}
+
+// ===== SEMAINES COMPACTES : 3 lignes visibles, extension auto =====
+function rowHasContent(r){
+  return ['org','manif','date','lieu','deb','fin','rem','clubs'].some(c=>String(r[c]||'').trim());
+}
+function visibleRowsForWeek(rows){
+  let last=-1;
+  rows.forEach((r,i)=>{if(r&&rowHasContent(r))last=i;});
+  return Math.min(rows.length,Math.max(3,last+2));
+}
+// Si la dernière ligne visible d'une semaine vient d'être remplie, on affiche une ligne de plus
+function maybeExtend(mois){
+  if(MOIS[currentIdx]!==mois) return;
+  const d=S.mois[mois];
+  const semaines=[];let cur=null;
+  d.rows.forEach(r=>{
+    if(r.sem){cur={rows:[]};semaines.push(cur);}
+    if(!cur){cur={rows:[]};semaines.push(cur);}
+    cur.rows.push(r);
+  });
+  let expected=0;
+  semaines.forEach(s=>expected+=visibleRowsForWeek(s.rows));
+  const shown=document.querySelectorAll('#'+currentCid+' tr[data-crow^="'+mois+'|"]').length;
+  if(shown===expected) return;
+  const ae=document.activeElement;
+  const editing=ae&&(ae.tagName==='TEXTAREA'||ae.tagName==='INPUT')&&(ae.classList.contains('ei')||ae.classList.contains('aei'));
+  if(editing){pendingExtend=true;return;}
+  renderTab(currentCid,currentIdx,currentIsAdmin);
+}
+
+// ===== DATE : normalisation automatique en jj/mm/aaaa =====
+function normDate(v){
+  v=(v||'').trim();
+  if(!v) return '';
+  let j,m,a;
+  let mt=v.match(/^(\d{1,2})[\/\-\.\s](\d{1,2})[\/\-\.\s](\d{2,4})$/);
+  if(mt){ j=parseInt(mt[1]);m=parseInt(mt[2]);a=parseInt(mt[3]); }
+  else{
+    mt=v.match(/^(\d{2})(\d{2})(\d{4})$/);
+    if(mt){ j=parseInt(mt[1]);m=parseInt(mt[2]);a=parseInt(mt[3]); }
+    else return v;
+  }
+  if(a<100) a+=2000;
+  if(j<1||j>31||m<1||m>12||a<2000||a>2100) return v;
+  // Convertir en "mardi 5 mai 2026"
+  const jours=['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+  const moisNoms=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+  const date = new Date(a, m-1, j);
+  if(date.getDate()!==j) return v; // date invalide (ex: 31 juin)
+  const jourNom = jours[date.getDay()];
+  const moisNom = moisNoms[m-1];
+  return jourNom+' '+j+'\n'+moisNom+' '+a;
+}
+function upDateField(mois,ri,el){
+  const f=normDate(el.value);
+  el.value=f;
+  upMField(mois,ri,'date',f);
+  refreshConflicts();
+}
+
+// ===== HORAIRES : accepte 14, 14h, 14h30, 14:30, 14.5 =====
+function parseHeure(v){
+  v=(v||'').trim().toLowerCase().replace(',','.');
+  if(!v) return null;
+  let m=v.match(/^(\d{1,2})\s*[h:]\s*(\d{0,2})$/);
+  if(m){ const h=parseInt(m[1]),mn=m[2]?parseInt(m[2]):0; if(h>24||mn>59)return null; return h+mn/60; }
+  m=v.match(/^(\d{1,2}(\.\d+)?)$/);
+  if(m){ const h=parseFloat(m[1]); return h<=24?h:null; }
+  return null;
+}
+function formatHeure(h){
+  const hh=Math.floor(h),mn=Math.round((h-hh)*60);
+  return hh+'h'+(mn?String(mn).padStart(2,'0'):'');
+}
+function upHeureField(mois,ri,field,el){
+  const h=parseHeure(el.value);
+  const f=(h===null)?el.value.trim():formatHeure(h);
+  el.value=f;
+  upMField(mois,ri,field,f);
+  refreshConflicts();
+}
+
+// ===== LIEU : menu déroulant en cascade (type puis lieu) =====
+function lieuSelects(mois,ri,r,lk){
+  const dis=lk?' disabled':'';
+  const cat=(r&&r.lieu_cat)||'', lieu=(r&&r.lieu)||'';
+  const list=cat==='EQUIPEMENT SPORTIF'?S.lieux.equipements:(cat==='SALLE MUNICIPALE'?S.lieux.salles:[]);
+  let opts=list.map(l=>`<option value="${x(l)}"${l===lieu?' selected':''}>${x(l)}</option>`).join('');
+  if(lieu&&!list.includes(lieu)) opts+=`<option value="${x(lieu)}" selected>${x(lieu)}</option>`;
+  return `<select class="ei"${dis} onchange="upLieuCat('${mois}',${ri},this)">
+      <option value=""${cat===''?' selected':''}>— Type —</option>
+      <option value="EQUIPEMENT SPORTIF"${cat==='EQUIPEMENT SPORTIF'?' selected':''}>🏟️ Équipement sportif</option>
+      <option value="SALLE MUNICIPALE"${cat==='SALLE MUNICIPALE'?' selected':''}>🏛️ Salle municipale</option>
+    </select>
+    <select class="ei"${dis}${(!lk&&!cat)?' disabled':''} onchange="upMField('${mois}',${ri},'lieu',this.value);refreshConflicts();">
+      <option value=""${lieu===''?' selected':''}>— Lieu —</option>${opts}
+    </select>`;
+}
+function upLieuCat(mois,ri,el){
+  const r=S.mois[mois].rows[ri]; if(!r) return;
+  r.lieu_cat=el.value; r.lieu='';
+  saveM();
+  const lk=S.verrou&&!currentIsAdmin;
+  el.closest('td').innerHTML=lieuSelects(mois,ri,r,lk);
+  refreshConflicts();
+}
+
+// ===== CONFLITS : même date + même lieu + plages horaires qui se chevauchent =====
+function computeConflicts(){
+  const groupes={},conf=new Set();
+  MOIS.forEach(m=>{
+    S.mois[m].rows.forEach((r,ri)=>{
+      if(!r) return;
+      const date=(r.date||'').trim(),lieu=(r.lieu||'').trim();
+      const deb=parseHeure(r.deb);
+      if(!date||!lieu||deb===null) return;
+      let fin=parseHeure(r.fin);
+      // fin absente ou incohérente : on considère une présence ponctuelle d'1 minute
+      if(fin===null||fin<=deb) fin=deb+1/60;
+      const key=date+'|'+lieu.toLowerCase();
+      if(!groupes[key]) groupes[key]=[];
+      groupes[key].push({id:m+'|'+ri,deb,fin});
+    });
+  });
+  // dans chaque groupe (même date + même lieu), on cherche les chevauchements
+  Object.values(groupes).forEach(list=>{
+    for(let i=0;i<list.length;i++){
+      for(let j=i+1;j<list.length;j++){
+        const a=list[i],b=list[j];
+        // chevauchement strict : il existe au moins une minute en commun
+        if(Math.max(a.deb,b.deb)<Math.min(a.fin,b.fin)){
+          conf.add(a.id);conf.add(b.id);
+        }
+      }
+    }
+  });
+  return conf;
+}
+function refreshConflicts(){
+  const conf=computeConflicts();
+  document.querySelectorAll('tr[data-crow]').forEach(tr=>{
+    tr.classList.toggle('conflict',conf.has(tr.dataset.crow));
+  });
+  document.querySelectorAll('.conflict-bar').forEach(b=>{
+    const m=b.dataset.mois;
+    let n=0;conf.forEach(k=>{if(k.split('|')[0]===m)n++;});
+    b.style.display=n?'flex':'none';
+    b.textContent='⚠️ '+n+' ligne(s) en conflit ce mois-ci : même date, même lieu, horaires qui se chevauchent — arbitrage nécessaire.';
+  });
+}
+
+// ===== ADMIN : gestion des lieux =====
+function renderLieuxListe(){
+  // Appelée quand on arrive sur la page - reset le select de gestion
+  const sel = document.getElementById('lieu-gerer-type');
+  if(sel) sel.value = '';
+  const liste = document.getElementById('lieux-gerer-liste');
+  if(liste) liste.innerHTML = '';
+}
+
+function renderLieuxGerer(){
+  const type = document.getElementById('lieu-gerer-type').value;
+  const el = document.getElementById('lieux-gerer-liste');
+  if(!el) return;
+  if(!type){ el.innerHTML=''; return; }
+
+  const lieux = (S.lieux && S.lieux[type]) || [];
+  el.innerHTML = '';
+
+  if(!lieux.length){
+    el.innerHTML = '<p style="color:var(--texte2);font-size:13px;margin-top:12px;">Aucun lieu de ce type pour l\'instant.</p>';
+    return;
+  }
+
+  lieux.forEach((nom, idx) => {
+    const div = document.createElement('div');
+    div.className = 'vcard';
+    div.style.cssText = 'padding:12px 16px;margin-bottom:8px;gap:8px;';
+
+    // Champ nom modifiable
+    const inp = document.createElement('input');
+    inp.type = 'text';
+    inp.value = nom;
+    inp.style.cssText = 'flex:1;padding:7px 10px;border:2px solid #E2E8F0;border-radius:8px;font-size:13px;font-family:Outfit,sans-serif;color:var(--texte);outline:none;';
+    inp.onfocus = ()=>{ inp.style.borderColor='var(--bleu3)'; };
+    inp.onblur  = ()=>{ inp.style.borderColor='#E2E8F0'; };
+
+    // Bouton modifier
+    const btnMod = document.createElement('button');
+    btnMod.textContent = '✏️ Modifier';
+    btnMod.style.cssText = 'background:var(--bleu);color:#fff;padding:7px 12px;border-radius:8px;border:none;cursor:pointer;font-size:12px;font-family:Outfit,sans-serif;white-space:nowrap;';
+    btnMod.onclick = ()=>{
+      const nouveau = inp.value.trim();
+      if(!nouveau){ toast('❌ Le nom ne peut pas être vide.'); return; }
+      if(nouveau === nom){ toast('Aucun changement.'); return; }
+      modifierLieu(type, nom, nouveau);
+    };
+
+    // Bouton supprimer
+    const btnSup = document.createElement('button');
+    btnSup.textContent = '🗑️';
+    btnSup.style.cssText = 'background:#C62828;color:#fff;padding:7px 12px;border-radius:8px;border:none;cursor:pointer;font-size:12px;';
+    btnSup.onclick = ()=> supprimerLieu(type, nom);
+
+    div.appendChild(inp);
+    div.appendChild(btnMod);
+    div.appendChild(btnSup);
+    el.appendChild(div);
+  });
+}
+
+function ajouterLieu(){
+  const type = document.getElementById('lieu-type').value;
+  const nom  = document.getElementById('lieu-nom').value.trim();
+  if(!nom){ toast('❌ Entrez un nom de lieu.'); return; }
+  if(!S.lieux) S.lieux = { equipements:[], salles:[] };
+  if(!S.lieux[type]) S.lieux[type] = [];
+  if(S.lieux[type].includes(nom)){ toast('❌ Ce lieu existe déjà.'); return; }
+  S.lieux[type].push(nom);
+  saveLocal(); saveToDB();
+  document.getElementById('lieu-nom').value = '';
+  toast('✅ Lieu ajouté : ' + nom);
+  renderLieuxGerer();
+}
+
+function supprimerLieu(type, nom){
+  showConfirm('🗑️ Supprimer "'+nom+'"',
+    'Ce lieu sera retiré du planning. Les manifestations déjà saisies avec ce lieu ne seront pas modifiées.',
+    ()=>{
+      S.lieux[type] = S.lieux[type].filter(l=>l!==nom);
+      saveLocal(); saveToDB();
+      renderLieuxGerer();
+      toast('🗑️ Lieu supprimé : '+nom);
+    }
+  );
+}
+
+function modifierLieu(type, ancien, nouveau){
+  showConfirm('✏️ Renommer "'+ancien+'"',
+    'Renommer en "'+nouveau+'" ? Les manifestations déjà saisies avec l’ancien nom seront mises à jour automatiquement.',
+    ()=>{
+      // Renommer dans la liste des lieux
+      const idx = S.lieux[type].indexOf(ancien);
+      if(idx >= 0) S.lieux[type][idx] = nouveau;
+
+      // Mettre à jour dans toutes les lignes du planning
+      MOIS.forEach(m=>{
+        S.mois[m].rows.forEach(r=>{
+          if(r.lieu === ancien) r.lieu = nouveau;
+          if(r.lieu2nom === ancien) r.lieu2nom = nouveau;
+        });
+      });
+
+      saveLocal(); saveToDB();
+      renderLieuxGerer();
+      toast('✅ "'+ancien+'" renommé en "'+nouveau+'" partout dans le planning.');
+    }
+  );
+}
+
+
+function ajouterLieu(){
+  const cat=document.getElementById('lieu-cat-admin').value;
+  const nom=document.getElementById('lieu-nom-admin').value.trim();
+  if(!nom){toast('❌ Le nom du lieu est vide.');return;}
+  if(S.lieux[cat].some(l=>l.toLowerCase()===nom.toLowerCase())){toast('❌ Ce lieu existe déjà.');return;}
+  S.lieux[cat].push(nom);
+  S.lieux[cat].sort((a,b)=>a.localeCompare(b,'fr'));
+  saveS();renderLieuxListe();
+  document.getElementById('lieu-nom-admin').value='';
+  toast('✅ Lieu « '+nom+' » ajouté.');
+}
+function supprimerLieu(cat,nom){
+  showConfirm('🗑️ Supprimer le lieu','Supprimer « '+nom+' » ? Les lignes du planning qui l\'utilisent conserveront ce nom, mais il ne sera plus proposé dans le menu.',()=>{
+    S.lieux[cat]=S.lieux[cat].filter(l=>l!==nom);
+    saveS();renderLieuxListe();
+    toast('🗑️ Lieu « '+nom+' » supprimé.');
+  });
+}
+
+function autoSync(mois,ri){
+  const r=S.mois[mois].rows[ri]; if(!r) return;
+  const mi=MOIS.indexOf(mois);
+  S.acts_list.forEach(a=>{
+    const al=a.toLowerCase();
+    const isOrg=r.org&&r.org.toLowerCase().includes(al);
+    const idxOrg=S.act[a].findIndex(e=>e.mois===mois&&e.src_ri===ri&&e.type==='org');
+    if(isOrg){const en={mois,mois_idx:mi,src_ri:ri,type:'org',manif:r.manif||'',rem:r.rem||''};if(idxOrg>=0)S.act[a][idxOrg]=en;else S.act[a].push(en);}
+    else{if(idxOrg>=0)S.act[a].splice(idxOrg,1);}
+    const isImp=r.clubs&&r.clubs.toLowerCase().includes(al);
+    const idxImp=S.act[a].findIndex(e=>e.mois===mois&&e.src_ri===ri&&e.type==='impact');
+    if(isImp){const en={mois,mois_idx:mi,src_ri:ri,type:'impact',manif:r.manif||'',rem:r.rem||''};if(idxImp>=0)S.act[a][idxImp]=en;else S.act[a].push(en);}
+    else{if(idxImp>=0)S.act[a].splice(idxImp,1);}
+  });
+  saveA();
+}
+
+function syncAll(){
+  S.acts_list.forEach(a=>{S.act[a]=[];});
+  MOIS.forEach(mois=>{
+    S.mois[mois].rows.forEach((r,ri)=>{
+      if(!r) return; const mi=MOIS.indexOf(mois);
+      S.acts_list.forEach(a=>{
+        const al=a.toLowerCase();
+        if(r.org&&r.org.toLowerCase().includes(al)) S.act[a].push({mois,mois_idx:mi,src_ri:ri,type:'org',manif:r.manif||'',rem:r.rem||''});
+        if(r.clubs&&r.clubs.toLowerCase().includes(al)) S.act[a].push({mois,mois_idx:mi,src_ri:ri,type:'impact',manif:r.manif||'',rem:r.rem||''});
+      });
+    });
+  });
+  saveA();
+}
+
+function renderAct(cid,nom,isAdmin){
+  const entries=S.act[nom]||[],lk=S.verrou&&!isAdmin,ro=lk?' ro':'';
+  const orgByMois={},impByMois={};
+  MOIS.forEach((_,mi)=>{orgByMois[mi]=[];impByMois[mi]=[];});
+  entries.forEach(e=>{if(e.type==='org')orgByMois[e.mois_idx].push(e);if(e.type==='impact')impByMois[e.mois_idx].push(e);});
+  const nbOrg=entries.filter(e=>e.type==='org').length,nbImp=entries.filter(e=>e.type==='impact').length;
+  let tbody='';
+  MOIS.forEach((m,mi)=>{
+    const orgs=orgByMois[mi],imps=impByMois[mi],maxRows=Math.max(orgs.length,imps.length,1);
+    tbody+=`<tr class="mr"><td colspan="4" style="padding:6px 10px;font-size:10px;font-weight:700;text-transform:uppercase;">
+      ${m} ${S.mois[m].an}<span style="opacity:.5;font-weight:400;margin-left:8px;">${orgs.length} manif. · ${imps.length} impact(s)</span>
+    </td></tr>`;
+    for(let li=0;li<maxRows;li++){
+      const o=orgs[li]||null,p=imps[li]||null;
+      tbody+=`<tr>
+        <td style="border-right:2px solid rgba(30,136,229,.25);"><textarea class="aei${roFinal}" rows="1" onInput="autoGrow(this)"
+          onchange="upAEntry('${nom}','org',${mi},${li},this.value,'manif')" style="min-width:180px">${x(o?o.manif:'')}</textarea></td>
+        <td style="border-right:3px solid rgba(255,165,0,.4);"><textarea class="aei${roFinal}" rows="1" onInput="autoGrow(this)"
+          onchange="upAEntry('${nom}','org',${mi},${li},this.value,'rem')" style="min-width:120px">${x(o?o.rem:'')}</textarea></td>
+        <td style="border-right:2px solid rgba(255,107,0,.2);"><textarea class="aei${roFinal}" rows="1" onInput="autoGrow(this)"
+          onchange="upAEntry('${nom}','impact',${mi},${li},this.value,'manif')" style="min-width:180px">${x(p?p.manif:'')}</textarea></td>
+        <td><textarea class="aei${roFinal}" rows="1" onInput="autoGrow(this)"
+          onchange="upAEntry('${nom}','impact',${mi},${li},this.value,'rem')" style="min-width:120px">${x(p?p.rem:'')}</textarea></td>
+      </tr>`;
+    }
+  });
+  document.getElementById(cid).innerHTML=`
+  <div class="mois-header" style="background:#0D1F38;">
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <h2>${nom}</h2><span style="font-size:11px;opacity:.55;">${nbOrg} manif. · ${nbImp} impact(s)</span>
+      ${lk?'<span style="background:rgba(198,40,40,.2);color:#FC8181;padding:2px 10px;border-radius:50px;font-size:11px;font-weight:700;">🔒 Lecture seule</span>':''}
+    </div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;">
+      ${isAdmin?`<button class="mbtn mb-b" onclick="syncAll();renderTab(currentCid,currentIdx,currentIsAdmin)">🔄 Recalculer</button>
+      <button class="mbtn mb-r" onclick="supprimerAct('${nom}')">🗑️ Supprimer</button>`:''}
+    </div>
+  </div>
+  <div style="overflow:auto;flex:1;"><table class="ta">
+    <thead>
+      <tr>
+        <th colspan="2" style="background:#0a2a5a;text-align:center;border-right:3px solid rgba(255,165,0,.5);">🏅 MANIFESTATIONS ORGANISÉES</th>
+        <th colspan="2" style="background:#3a1a00;text-align:center;">⚠️ IMPACTS POUR LE CLUB</th>
+      </tr>
+      <tr>
+        <th style="min-width:180px;border-right:2px solid rgba(30,136,229,.25);">Manifestation</th>
+        <th style="min-width:120px;border-right:3px solid rgba(255,165,0,.4);">Remarques</th>
+        <th style="min-width:180px;border-right:2px solid rgba(255,107,0,.2);">Impact pour le club</th>
+        <th style="min-width:120px;">Remarques impact</th>
+      </tr>
+    </thead>
+    <tbody>${tbody}
+    <tr class="tr-tot">
+      <td colspan="2" style="border-right:3px solid rgba(255,165,0,.4);">Total manifestations : ${nbOrg}</td>
+      <td colspan="2">Total impacts : ${nbImp}</td>
+    </tr></tbody>
+  </table></div>`;
+  setTimeout(()=>document.querySelectorAll('#'+cid+' textarea.aei').forEach(autoGrow),10);
+}
+
+function upAEntry(nom,type,mi,li,val,field){
+  const entries=S.act[nom].filter(e=>e.type===type&&e.mois_idx===mi);
+  if(entries[li]) entries[li][field]=val;
+  saveA();
+}
+
+function renderBilanInline(cid,isAdmin){
+  const an=S.annee;
+  const totH=Object.values(S.mois).reduce((s,m)=>s+m.rows.reduce((ss,r)=>ss+(parseFloat(r.dur)||0),0),0);
+  let tbody='',totI=0,totO=0;
+  S.acts_list.forEach(a=>{
+    const st=calcStats(a);totI+=st.imp;totO+=st.org;
+    tbody+=`<tr><td><strong>${a}</strong></td><td class="nr">${st.org}</td><td class="nr">${st.imp}</td>
+    <td class="nr" style="color:#42A5F5">${st.org+st.imp}</td><td class="nr">${st.h}h</td>
+    <td style="font-size:11px;color:rgba(255,255,255,.4);font-style:italic">${NOTES[a]||''}</td></tr>`;
+  });
+  document.getElementById(cid).innerHTML=`
+  <div style="padding:10px 16px;background:#0D1F38;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:22px;">BILAN ${an}–${an+1}</h2>
+    ${isAdmin?`<div style="display:flex;gap:6px;">
+      <button class="mbtn mb-o" onclick="macroBilan()">📊 Bilan</button>
+      <button class="mbtn mb-b" onclick="macroCreneaux()">🔄 Créneaux</button>
+    </div>`:''}
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;padding:12px 16px;background:#0A1628;">
+    <div style="background:#0D1F38;border-radius:8px;padding:12px;text-align:center;"><div style="font-size:22px;font-weight:700;color:#FFB300">${totH}h</div><div style="font-size:9px;color:rgba(255,255,255,.4);text-transform:uppercase;">Heures planif.</div></div>
+    <div style="background:#0D1F38;border-radius:8px;padding:12px;text-align:center;"><div style="font-size:22px;font-weight:700;color:#64B5F6">${totO+totI}</div><div style="font-size:9px;color:rgba(255,255,255,.4);text-transform:uppercase;">Total impacts</div></div>
+    <div style="background:#0D1F38;border-radius:8px;padding:12px;text-align:center;"><div style="font-size:22px;font-weight:700;color:#81C784">${S.acts_list.length}</div><div style="font-size:9px;color:rgba(255,255,255,.4);text-transform:uppercase;">Associations</div></div>
+  </div>
+  <div style="overflow:auto;flex:1;padding:0 16px 16px;">
+  <table class="ta" style="font-size:11.5px;">
+    <thead><tr><th>Association</th><th style="text-align:right">Organisation</th><th style="text-align:right">Clubs impactés</th><th style="text-align:right">Total</th><th style="text-align:right">Heures</th><th>Note</th></tr></thead>
+    <tbody>${tbody}</tbody>
+  </table></div>`;
+}
+
+function renderBilan(){
+  const an=S.annee;
+  document.getElementById('bilan-an').textContent=an+'–'+(an+1);
+  document.getElementById('bilan-titre').textContent=an+'–'+(an+1);
+  // S'assurer que acts_list est disponible
+  if(!S.acts_list || !S.acts_list.length) S.acts_list=[...ACTS_DEFAULT];
+  const totH=Object.values(S.mois).reduce((s,m)=>s+m.rows.reduce((ss,r)=>ss+(parseFloat(r.dur)||0),0),0);
+  let tbody='',totI=0,totO=0;
+  S.acts_list.forEach(a=>{
+    const st=calcStats(a);totI+=st.imp;totO+=st.org;
+    tbody+=`<tr><td><strong>${a}</strong></td><td class="nr">${st.org}</td><td class="nr">${st.imp}</td><td class="nr">${st.org+st.imp}</td><td class="nr">${st.h}h</td><td class="notetd">${NOTES[a]||''}</td></tr>`;
+  });
+  document.getElementById('bilan-cards').innerHTML=`
+    <div class="bc"><div class="n">${totH}h</div><div class="l">Heures planifiées</div></div>
+    <div class="bc"><div class="n">${totO+totI}</div><div class="l">Total impacts</div></div>
+    <div class="bc"><div class="n">${S.acts_list.length}</div><div class="l">Associations</div></div>
+    <div class="bc"><div class="n">12</div><div class="l">Mois</div></div>`;
+  document.getElementById('bilan-tbody').innerHTML=tbody;
+}
+
+function calcStats(a){
+  let org=0,imp=0,h=0;
+  MOIS.forEach(m=>{S.mois[m].rows.forEach(r=>{
+    if(r.org&&r.org.toLowerCase().includes(a.toLowerCase())){org++;h+=parseFloat(r.dur)||0;}
+    if(r.clubs&&r.clubs.toLowerCase().includes(a.toLowerCase())) imp++;
+  });});
+  return {org,imp,h};
+}
+
+function buildExtractionBtns(){
+  document.getElementById('extract-mois-btns').innerHTML=MOIS.map(m=>`<button class="ebtn" onclick="exportMois('${m}')">⬇️ ${m}</button>`).join('');
+  document.getElementById('extract-act-btns').innerHTML=S.acts_list.map(a=>`<button class="ebtn orange" onclick="exportAct('${a}')">⬇️ ${a}</button>`).join('');
+}
+function csvDownload(filename,rows){
+  const BOM='\uFEFF';
+  const csv=BOM+rows.map(r=>r.map(c=>'"'+(String(c||'').replace(/"/g,'""'))+'"').join(';')).join('\n');
+  const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=filename;a.click();URL.revokeObjectURL(a.href);
+}
+function exportMois(mois){
+  const d=S.mois[mois];
+  const rows=[['Semaine','Organisateur','Manifestation','Date','Type de lieu','Lieu','Début','Fin','Date demande','Traitement','Remarque','Clubs impactés','Durée']];
+  d.rows.forEach(r=>rows.push([r.sem,r.org,r.manif,r.date||'',r.lieu_cat||'',r.lieu||'',r.deb,r.fin,r.ddate,r.trait,r.rem,r.clubs,r.dur]));
+  csvDownload(`Planning_${mois}_${d.an}.csv`,rows);toast(`⬇️ ${mois} téléchargé !`);
+}
+function exportAct(nom){
+  const orgs=[], imps=[];
+  MOIS.forEach(m=>{
+    (S.act[nom]||[]).filter(e=>e.mois===m&&e.type==='org'&&(e.manif||e.rem).trim())
+      .forEach(e=>orgs.push({mois:m, manif:e.manif||'', rem:e.rem||''}));
+    (S.act[nom]||[]).filter(e=>e.mois===m&&e.type==='impact'&&(e.manif||e.rem).trim())
+      .forEach(e=>imps.push({mois:m, manif:e.manif||'', rem:e.rem||''}));
+  });
+  const rows=[
+    ['Vos manifestations','','','Vos impacts','',''],
+    ['Mois','Manifestation','Remarque','Mois','Impact pour le club','Remarque']
+  ];
+  const maxLines = Math.max(orgs.length, imps.length);
+  for(let i=0; i<maxLines; i++){
+    const o = orgs[i]||null;
+    const p = imps[i]||null;
+    rows.push([
+      o?o.mois:'', o?o.manif:'', o?o.rem:'',
+      p?p.mois:'', p?p.manif:'', p?p.rem:''
+    ]);
+  }
+  csvDownload(`Planning_${nom}.csv`,rows);
+  toast(`⬇️ ${nom} téléchargé !`);
+}
+function exportBilan(){
+  const rows=[['Association','Organisation','Clubs impactés','Total','Heures']];
+  S.acts_list.forEach(a=>{const st=calcStats(a);rows.push([a,st.org,st.imp,st.org+st.imp,st.h+'h']);});
+  csvDownload(`Bilan_${S.annee}-${S.annee+1}.csv`,rows);toast('⬇️ Bilan téléchargé !');
+}
+
+function macroCreneaux(){syncAll();const n=S.acts_list.reduce((s,a)=>s+S.act[a].length,0);toast('🔄 '+n+' entrées synchronisées.');}
+function macroHeures(){let t=0;MOIS.forEach(m=>{t+=S.mois[m].rows.reduce((s,r)=>s+(parseFloat(r.dur)||0),0);});toast('🕐 Total annuel : '+t+'h');}
+function macroBilan(){macroHeures();renderBilan();toast('📊 Bilan mis à jour.');}
+
+function majVerrou(){
+  const sb=document.getElementById('verrou-sb'),t=document.getElementById('verrou-txt');
+  if(S.verrou){sb.className='sb sb-lock';t.textContent='Verrouillé — associations en lecture seule.';}
+  else{sb.className='sb sb-open';t.textContent='Déverrouillé — modification autorisée.';}
+}
+function verrouiller(){S.verrou=true;saveS();majVerrou();toast('🔒 Planning verrouillé.');}
+function deverrouiller(){S.verrou=false;saveS();majVerrou();toast('🔓 Planning déverrouillé.');}
+
+function confirmReset(){
+  showConfirm('🗑️ Remettre à zéro','Êtes-vous sûr d\'effacer TOUTES les données ? Action irréversible.',()=>{
+    S.mois=JSON.parse(JSON.stringify(ODS));S.acts_list=[...ACTS_DEFAULT];initAct();saveToDB();
+    toast('🗑️ Données remises à zéro.');
+  });
+}
+
+function changerMdp(t){
+  const isA=t==='asso';
+  const n=document.getElementById(isA?'na1':'nadm1').value.trim();
+  const c=document.getElementById(isA?'na2':'nadm2').value.trim();
+  const msg=document.getElementById(isA?'msg-na':'msg-nadm');
+  msg.style.display='block';
+  if(!n){msg.style.color='#C62828';msg.textContent='Le code ne peut pas être vide.';return;}
+  if(n!==c){msg.style.color='#C62828';msg.textContent='Les deux codes ne correspondent pas.';return;}
+  if(isA)S.mdpAsso=n;else S.mdpAdmin=n;
+  saveS();msg.style.color='#2E7D32';msg.textContent='✅ Code mis à jour.';
+  document.getElementById(isA?'na1':'nadm1').value='';
+  document.getElementById(isA?'na2':'nadm2').value='';
+  toast('✅ Code '+(isA?'association':'administrateur')+' modifié.');
+}
+
+function majSaison(){const v=parseInt(document.getElementById('inp-an').value)||2026;document.getElementById('prev-saison').textContent=v+'–'+(v+1);}
+document.getElementById('inp-an').addEventListener('input',majSaison);
+function changerAnnee(){
+  const v=parseInt(document.getElementById('inp-an').value);
+  if(isNaN(v)||v<2020||v>2060){toast('❌ Année invalide.');return;}
+  S.annee=v;saveS();toast('✅ Saison mise à jour : '+v+'–'+(v+1));
+}
+
+function autoGrow(el){el.style.height='auto';el.style.height=el.scrollHeight+'px';}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3500);}
+function x(s){return(s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');}
+
+// ============================================================
+// BILAN PAR SITE
+// ============================================================
+function bsChangerType(){
+  const type = document.getElementById('bs-type').value;
+  document.getElementById('bs-site-wrap').style.display='none';
+  document.getElementById('bs-mois-wrap').style.display='none';
+  document.getElementById('bs-result').innerHTML='';
+  if(!type) return;
+  const sites = type==='sport' ? (S.lieux.equipements||[]) : (S.lieux.salles||[]);
+  const sel = document.getElementById('bs-site');
+  sel.innerHTML = '<option value="">-- Choisir un site --</option>';
+  sites.forEach(s => sel.innerHTML += `<option value="${s}">${s}</option>`);
+  document.getElementById('bs-site-wrap').style.display='block';
+}
+
+function bsChangerSite(){
+  const site = document.getElementById('bs-site').value;
+  document.getElementById('bs-mois-wrap').style.display='none';
+  document.getElementById('bs-result').innerHTML='';
+  if(!site) return;
+  const sel = document.getElementById('bs-mois');
+  sel.innerHTML = '<option value="">-- Choisir un mois --</option>';
+  MOIS.forEach(m => sel.innerHTML += `<option value="${m}">${m} ${S.mois[m].an}</option>`);
+  document.getElementById('bs-mois-wrap').style.display='block';
+}
+
+function bsAfficher(){
+  const site  = document.getElementById('bs-site').value;
+  const mois  = document.getElementById('bs-mois').value;
+  const result = document.getElementById('bs-result');
+  if(!site||!mois){result.innerHTML='';return;}
+  const rows = S.mois[mois].rows;
+  const siteLow = site.toLowerCase();
+  const trouvees = rows.filter(r=>
+    (r.lieu && r.lieu.toLowerCase().includes(siteLow)) ||
+    (r.manif && r.manif.toLowerCase().includes(siteLow))
+  );
+  if(!trouvees.length){
+    result.innerHTML=`<div style="background:#fff;border-radius:12px;padding:24px;border:1px solid #E2E8F0;text-align:center;">
+      <div style="font-size:32px;margin-bottom:8px;">📭</div>
+      <p style="color:var(--texte2);font-size:14px;">Aucune manifestation trouvée à <strong>${site}</strong> en <strong>${mois}</strong>.</p>
+    </div>`;
+    return;
+  }
+  let html=`<div style="background:#fff;border-radius:12px;border:1px solid #E2E8F0;overflow:hidden;box-shadow:0 2px 12px rgba(0,63,138,.08);">
+    <div style="background:var(--bleu);color:#fff;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;">
+      <span style="font-weight:700;font-size:15px;">📍 ${site} — ${mois} ${S.mois[mois].an}</span>
+      <span style="font-size:12px;opacity:.8;background:rgba(255,255,255,.15);padding:3px 10px;border-radius:20px;">${trouvees.length} manifestation(s)</span>
+    </div>
+    <div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;font-size:13px;">
+      <thead><tr style="background:#F4F7FB;">
+        <th style="padding:10px 14px;text-align:left;border-bottom:1px solid #E2E8F0;color:var(--texte2);font-size:11px;text-transform:uppercase;">Sem.</th>
+        <th style="padding:10px 14px;text-align:left;border-bottom:1px solid #E2E8F0;color:var(--texte2);font-size:11px;text-transform:uppercase;">Organisateur</th>
+        <th style="padding:10px 14px;text-align:left;border-bottom:1px solid #E2E8F0;color:var(--texte2);font-size:11px;text-transform:uppercase;">Manifestation</th>
+        <th style="padding:10px 14px;text-align:left;border-bottom:1px solid #E2E8F0;color:var(--texte2);font-size:11px;text-transform:uppercase;">Date</th>
+        <th style="padding:10px 14px;text-align:left;border-bottom:1px solid #E2E8F0;color:var(--texte2);font-size:11px;text-transform:uppercase;">Début</th>
+        <th style="padding:10px 14px;text-align:left;border-bottom:1px solid #E2E8F0;color:var(--texte2);font-size:11px;text-transform:uppercase;">Fin</th>
+        <th style="padding:10px 14px;text-align:left;border-bottom:1px solid #E2E8F0;color:var(--texte2);font-size:11px;text-transform:uppercase;">Traitement</th>
+        <th style="padding:10px 14px;text-align:left;border-bottom:1px solid #E2E8F0;color:var(--texte2);font-size:11px;text-transform:uppercase;">Remarque</th>
+      </tr></thead><tbody>`;
+  trouvees.forEach((r,i)=>{
+    const bg=i%2===0?'#fff':'#F9FBFD';
+    html+=`<tr style="background:${bg};border-bottom:1px solid #E2E8F0;">
+      <td style="padding:10px 14px;color:#42A5F5;font-weight:700;font-size:11px;">${r.sem||''}</td>
+      <td style="padding:10px 14px;color:var(--texte);vertical-align:top;">${r.org||'—'}</td>
+      <td style="padding:10px 14px;color:var(--texte);vertical-align:top;">${r.manif||'—'}</td>
+      <td style="padding:10px 14px;color:var(--texte2);white-space:nowrap;">${r.ddate||'—'}</td>
+      <td style="padding:10px 14px;color:#FFB300;font-weight:600;">${r.deb||'—'}</td>
+      <td style="padding:10px 14px;color:#FFB300;font-weight:600;">${r.fin||'—'}</td>
+      <td style="padding:10px 14px;color:var(--texte2);font-size:12px;">${r.trait||'—'}</td>
+      <td style="padding:10px 14px;color:var(--texte2);font-size:12px;">${r.rem||'—'}</td>
+    </tr>`;
+  });
+  html+=`</tbody></table></div></div>`;
+  result.innerHTML=html;
+}
+
+
+
+// ============================================================
+// STATE - Variables globales
+// ============================================================
+let currentUser = null; // { nom, role: 'asso'|'agent'|'admin' }
+
+let S={
+  mdpAsso:localStorage.getItem('mdp_asso')||'Corbas',
+  mdpAdmin:localStorage.getItem('mdp_admin')||'Corbas',
+  mdpAgent:localStorage.getItem('mdp_agent')||'Agent69',
+  verrou:localStorage.getItem('verrou')==='true',
+  annee:parseInt(localStorage.getItem('annee')||'2026'),
+  mois:JSON.parse(localStorage.getItem('mois_data')||'null'),
+  act:JSON.parse(localStorage.getItem('act_data')||'null'),
+  acts_list:JSON.parse(localStorage.getItem('acts_list')||'null'),
+  lieux:JSON.parse(localStorage.getItem('lieux_data')||'null'),
+  comptes:JSON.parse(localStorage.getItem('comptes_assos')||'{}'),
+};
+if(!S.acts_list) S.acts_list=[...ACTS_DEFAULT];
+if(!S.mois){ S.mois=JSON.parse(JSON.stringify(ODS)); }
+if(!S.act){ initAct(); }
+if(!S.lieux) S.lieux=JSON.parse(JSON.stringify(LIEUX_DEFAULT));
+
+// ============================================================
+// NAVIGATION
+// ============================================================
+function go(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const pg = document.getElementById(id);
+  if(pg) pg.classList.add('active');
+  if(id==='pg-verrou') majVerrou();
+  if(id==='pg-bilan'){ renderBilan(); document.getElementById('bilan-an').textContent=S.annee+'\u2013'+(S.annee+1); }
+  if(id==='pg-extraction') buildExtractionBtns();
+  if(id==='pg-settings'){ const el=document.getElementById('inp-an'); if(el){el.value=S.annee; document.getElementById('prev-saison').textContent=S.annee+'\u2013'+(S.annee+1);} }
+  if(id==='pg-lieux') renderLieuxListe();
+  if(id==='pg-gestion-assos') renderListeAssosAdmin();
+  if(id==='pg-saisons') renderSaisonsList();
+  if(id==='pg-asso'||id==='pg-admin-planning') setTimeout(updateSaisonBadges, 100);
+  if(id==='pg-admin'){
+    const isAgent = currentUser && currentUser.role==='agent';
+    document.querySelectorAll('.admin-only-card').forEach(c=>c.style.display=isAgent?'none':'');
+  }
+}
+
+function deconnexion(){
+  currentUser = null;
+  go('pg-accueil');
+}
+
+function ouvrirPlanningAdmin(){
+  buildTabs('admin-tabs-zone','admin-content',true);
+  go('pg-admin-planning');
+  const titre = document.getElementById('planning-admin-titre');
+  if(titre) titre.textContent = '📋 Planning — ' + (currentUser&&currentUser.role==='agent' ? 'Agent' : 'Administrateur');
+}
+
+// ============================================================
+// MODALES
+// ============================================================
+function openModal(t){
+  document.getElementById('modal-'+t).classList.add('open');
+  if(t==='asso' || t==='creer-compte') populateAssoSelects();
+}
+function closeModal(t){
+  document.getElementById('modal-'+t).classList.remove('open');
+}
+function showConfirm(title, msg, cb){
+  document.getElementById('confirm-title').textContent = title;
+  document.getElementById('confirm-msg').textContent = msg;
+  confirmCallback = cb;
+  document.getElementById('modal-confirm').classList.add('open');
+}
+function closeConfirm(){
+  document.getElementById('modal-confirm').classList.remove('open');
+}
+
+// ============================================================
+// AUTHENTIFICATION
+// ============================================================
+function valAsso(){
+  const nom = document.getElementById('asso-nom-select').value.trim();
+  const mdp = document.getElementById('code-asso').value.trim();
+  const remember = document.getElementById('asso-remember').checked;
+  const err = document.getElementById('err-asso');
+  err.style.display='none';
+
+  if(!nom){ err.textContent='Veuillez choisir votre association.'; err.style.display='block'; return; }
+  const compte = S.comptes[nom];
+  if(!compte){ err.textContent='Aucun compte pour cette association. Créez-en un.'; err.style.display='block'; return; }
+  if(compte.mdp !== mdp){ err.textContent='Mot de passe incorrect.'; err.style.display='block'; return; }
+
+  currentUser = { nom, role:'asso', mail:compte.mail, prefs:compte.prefs||{} };
+  if(remember) localStorage.setItem('asso_remember', JSON.stringify({nom,mdp}));
+  closeModal('asso');
+  buildTabs('asso-tabs-zone','asso-content',false);
+  document.getElementById('asso-lock-bar').style.display=S.verrou?'flex':'none';
+  const btnPrefs = document.getElementById('btn-prefs-asso');
+  if(btnPrefs) btnPrefs.style.display='inline-block';
+  go('pg-asso');
+  toast('\u2705 Bonjour '+nom+' !');
+}
+
+function valAgent(){
+  const mdp = document.getElementById('code-agent').value.trim();
+  const err = document.getElementById('err-agent');
+  err.style.display='none';
+  if(mdp === S.mdpAgent){
+    currentUser = { nom:'Agent', role:'agent' };
+    closeModal('agent');
+    go('pg-admin');
+    toast('\u2705 Connexion agent réussie !');
+  } else {
+    err.textContent='Code incorrect.';
+    err.style.display='block';
+  }
+}
+
+function valAdmin(){
+  const mdp = document.getElementById('code-admin').value.trim();
+  const err = document.getElementById('err-admin');
+  err.style.display='none';
+  if(mdp === S.mdpAdmin){
+    currentUser = { nom:'Admin', role:'admin' };
+    closeModal('admin');
+    go('pg-admin');
+    toast('\u2705 Bienvenue administrateur !');
+  } else {
+    err.textContent='Code incorrect.';
+    err.style.display='block';
+  }
+}
+
+function creerCompteAsso(){
+  const nom  = document.getElementById('cc-nom').value.trim();
+  const mdp  = document.getElementById('cc-mdp').value.trim();
+  const mdp2 = document.getElementById('cc-mdp2').value.trim();
+  const err  = document.getElementById('err-creer-compte');
+  err.style.display='none';
+  if(!nom){ err.textContent='Choisissez votre association.'; err.style.display='block'; return; }
+  if(S.comptes[nom]){ err.textContent='Un compte existe déjà pour cette association.'; err.style.display='block'; return; }
+  if(!mdp || mdp.length<4){ err.textContent='Mot de passe trop court (4 caractères min).'; err.style.display='block'; return; }
+  if(mdp !== mdp2){ err.textContent='Les mots de passe ne correspondent pas.'; err.style.display='block'; return; }
+  S.comptes[nom] = { mdp, createdAt:new Date().toISOString() };
+  saveLocal(); saveToDB();
+  closeModal('creer-compte');
+  toast('✅ Compte créé ! Vous pouvez maintenant vous connecter.');
+}
+
+function populateAssoSelects(){
+  ['asso-nom-select','cc-nom'].forEach(id=>{
+    const sel = document.getElementById(id);
+    if(!sel) return;
+    const current = sel.value;
+    sel.innerHTML = id==='cc-nom'
+      ? '<option value="">-- Choisir votre association --</option>'
+      : '<option value="">-- Choisir votre association --</option>';
+    (S.acts_list||[]).forEach(a=>{
+      const opt = document.createElement('option');
+      opt.value = a; opt.textContent = a;
+      if(a===current) opt.selected=true;
+      sel.appendChild(opt);
+    });
+  });
+  // Pré-remplir si "se souvenir"
+  try{
+    const rem = localStorage.getItem('asso_remember');
+    if(rem){
+      const r = JSON.parse(rem);
+      const sel = document.getElementById('asso-nom-select');
+      if(sel && r.nom) sel.value=r.nom;
+      const inp = document.getElementById('code-asso');
+      if(inp && r.mdp) inp.value=r.mdp;
+      const cb = document.getElementById('asso-remember');
+      if(cb) cb.checked=true;
+    }
+  }catch(e){}
+}
+
+function sauvegarderPrefs(){
+  if(!currentUser || currentUser.role!=='asso') return;
+  const rappel = document.getElementById('pref-rappel').checked;
+  const impact = document.getElementById('pref-impact').checked;
+  if(S.comptes[currentUser.nom]){
+    S.comptes[currentUser.nom].prefs = {rappel,impact};
+    saveLocal(); saveToDB();
+  }
+  closeModal('prefs-mail');
+  toast('\u2705 Préférences enregistrées !');
+}
+
+// ============================================================
+// GESTION AGENT - CODE
+// ============================================================
+function changerMdpAgent(){
+  const n = document.getElementById('nagent1').value.trim();
+  const c = document.getElementById('nagent2').value.trim();
+  const msg = document.getElementById('msg-nagent');
+  msg.style.display='block';
+  if(!n){ msg.style.color='#C62828'; msg.textContent='Le code ne peut pas être vide.'; return; }
+  if(n!==c){ msg.style.color='#C62828'; msg.textContent='Les deux codes ne correspondent pas.'; return; }
+  S.mdpAgent=n; saveS();
+  msg.style.color='#2E7D32'; msg.textContent='\u2705 Code agent mis à jour.';
+  toast('\u2705 Code agent modifié.');
+}
+
+// ============================================================
+// GESTION DES ASSOCIATIONS
+// ============================================================
+function ajouterAssoDuPlanning(){
+  const nom = document.getElementById('new-asso-input').value.trim();
+  if(!nom){ toast('Entrez un nom.'); return; }
+  if(S.acts_list.includes(nom)){ toast('Cette association existe déjà.'); return; }
+  S.acts_list.push(nom);
+  if(!S.act[nom]) S.act[nom]=[];
+  saveA();
+  document.getElementById('new-asso-input').value='';
+  renderListeAssosAdmin();
+  toast('\u2705 Association ajoutée : '+nom);
+}
+
+function supprimerAssoDuPlanning(nom){
+  showConfirm('Supprimer "'+nom+'"',
+    'Êtes-vous sûr ? Les données de cette association seront perdues.',
+    ()=>{
+      S.acts_list = S.acts_list.filter(a=>a!==nom);
+      delete S.act[nom];
+      delete S.comptes[nom];
+      saveA(); saveLocal();
+      renderListeAssosAdmin();
+      toast('Association supprimée : '+nom);
+    }
+  );
+}
+
+function renderListeAssosAdmin(){
+  const el = document.getElementById('liste-assos-admin');
+  if(!el) return;
+  el.innerHTML = '';
+  if(!S.acts_list || !S.acts_list.length){
+    el.innerHTML = '<p style="color:var(--texte2);font-size:13px;">Aucune association.</p>';
+    return;
+  }
+  S.acts_list.forEach(a=>{
+    const hasCompte = !!S.comptes[a];
+    const div = document.createElement('div');
+    div.className = 'vcard';
+    div.style.cssText = 'padding:14px 16px;margin-bottom:10px;flex-wrap:wrap;gap:8px;align-items:center;';
+    const info = document.createElement('div');
+    info.style.cssText = 'flex:1;min-width:150px;';
+    info.innerHTML = '<div style="font-size:14px;font-weight:700;">'+a+'</div>'
+      +'<div style="font-size:11px;color:var(--texte2);margin-top:3px;">'
+      +(hasCompte ? '✅ Compte créé' : '⚠️ Pas encore de compte')+'</div>';
+    const btns = document.createElement('div');
+    btns.style.cssText = 'display:flex;gap:6px;flex-wrap:wrap;';
+    if(hasCompte){
+      const btnMdp = document.createElement('button');
+      btnMdp.textContent = '🔑 Mdp';
+      btnMdp.style.cssText = 'background:var(--bleu);color:#fff;padding:6px 10px;border-radius:8px;border:none;cursor:pointer;font-size:12px;';
+      btnMdp.onclick = ()=>changerMdpAsso(a);
+      btns.appendChild(btnMdp);
+    }
+    const btnRen = document.createElement('button');
+    btnRen.textContent = '✏️ Renommer';
+    btnRen.style.cssText = 'background:#2E7D32;color:#fff;padding:6px 10px;border-radius:8px;border:none;cursor:pointer;font-size:12px;';
+    btnRen.onclick = ()=>renommerAsso(a);
+    btns.appendChild(btnRen);
+    const btnSup = document.createElement('button');
+    btnSup.textContent = '🗑️';
+    btnSup.style.cssText = 'background:#C62828;color:#fff;padding:6px 10px;border-radius:8px;border:none;cursor:pointer;font-size:12px;';
+    btnSup.onclick = ()=>supprimerAssoDuPlanning(a);
+    btns.appendChild(btnSup);
+    div.appendChild(info);
+    div.appendChild(btns);
+    el.appendChild(div);
+  });
+}
+
+function changerMdpAsso(nom){
+  const nouveauMdp = prompt('Nouveau mot de passe pour "'+nom+'" :');
+  if(!nouveauMdp || nouveauMdp.length < 4){ toast('❌ Mot de passe trop court.'); return; }
+  if(S.comptes[nom]){
+    S.comptes[nom].mdp = nouveauMdp;
+    saveLocal(); saveToDB();
+    renderListeAssosAdmin();
+    toast('✅ Mot de passe de "'+nom+'" modifié.');
+  }
+}
+
+function renommerAsso(ancien){
+  const nouveau = prompt('Nouveau nom pour "'+ancien+'" :');
+  if(!nouveau || !nouveau.trim()) return;
+  const nv = nouveau.trim();
+  if(S.acts_list.includes(nv)){ toast('❌ Ce nom existe déjà.'); return; }
+  const idx = S.acts_list.indexOf(ancien);
+  if(idx >= 0) S.acts_list[idx] = nv;
+  if(S.comptes[ancien]){ S.comptes[nv] = S.comptes[ancien]; delete S.comptes[ancien]; }
+  if(S.act[ancien]){ S.act[nv] = S.act[ancien]; delete S.act[ancien]; }
+  MOIS.forEach(m=>{ S.mois[m].rows.forEach(r=>{ if(r.org===ancien) r.org=nv; }); });
+  saveLocal(); saveToDB();
+  renderListeAssosAdmin();
+  toast('✅ "'+ancien+'" renommé en "'+nv+'".');
+}
+
+// ============================================================
+// BILAN PAR SITE
+// ============================================================
+function bsChangerType(){
+  const type = document.getElementById('bs-type').value;
+  document.getElementById('bs-site-wrap').style.display='none';
+  document.getElementById('bs-mois-wrap').style.display='none';
+  document.getElementById('bs-result').innerHTML='';
+  if(!type) return;
+  const sites = (S.lieux&&S.lieux[type])||[];
+  const sel = document.getElementById('bs-site');
+  sel.innerHTML='<option value="">-- Choisir un site --</option>';
+  sites.forEach(s=>{ const o=document.createElement('option'); o.value=s; o.textContent=s; sel.appendChild(o); });
+  document.getElementById('bs-site-wrap').style.display='block';
+}
+
+function bsChangerSite(){
+  const site = document.getElementById('bs-site').value;
+  document.getElementById('bs-mois-wrap').style.display='none';
+  document.getElementById('bs-result').innerHTML='';
+  if(!site) return;
+  const sel = document.getElementById('bs-mois');
+  sel.innerHTML='<option value="">-- Choisir un mois --</option>';
+  MOIS.forEach(m=>{ const o=document.createElement('option'); o.value=m; o.textContent=m+' '+S.mois[m].an; sel.appendChild(o); });
+  document.getElementById('bs-mois-wrap').style.display='block';
+}
+
+function bsAfficher(){
+  const site = document.getElementById('bs-site').value;
+  const mois = document.getElementById('bs-mois').value;
+  const result = document.getElementById('bs-result');
+  if(!site||!mois){ result.innerHTML=''; return; }
+  const rows = S.mois[mois].rows;
+  const siteLow = site.toLowerCase();
+  const trouvees = rows.filter(r=>
+    (r.lieu&&r.lieu.toLowerCase().includes(siteLow))||
+    (r.manif&&r.manif.toLowerCase().includes(siteLow))
+  );
+  if(!trouvees.length){
+    result.innerHTML='<div style="background:#fff;border-radius:12px;padding:24px;text-align:center;border:1px solid #E2E8F0;"><div style="font-size:32px;">\ud83d\udceb</div><p style="color:var(--texte2);">Aucune manifestation à <strong>'+site+'</strong> en <strong>'+mois+'</strong>.</p></div>';
+    return;
+  }
+  let html='<div style="background:#fff;border-radius:12px;border:1px solid #E2E8F0;overflow:hidden;">'
+    +'<div style="background:var(--bleu);color:#fff;padding:14px 18px;display:flex;justify-content:space-between;">'
+    +'<span style="font-weight:700;">\ud83d\udccd '+site+' — '+mois+' '+S.mois[mois].an+'</span>'
+    +'<span style="font-size:12px;opacity:.8;">'+trouvees.length+' manifestation(s)</span></div>'
+    +'<div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;font-size:13px;">'
+    +'<thead><tr style="background:#F4F7FB;">'
+    +'<th style="padding:10px 14px;text-align:left;border-bottom:1px solid #E2E8F0;color:var(--texte2);font-size:11px;">Sem.</th>'
+    +'<th style="padding:10px 14px;text-align:left;border-bottom:1px solid #E2E8F0;color:var(--texte2);font-size:11px;">Organisateur</th>'
+    +'<th style="padding:10px 14px;text-align:left;border-bottom:1px solid #E2E8F0;color:var(--texte2);font-size:11px;">Manifestation</th>'
+    +'<th style="padding:10px 14px;text-align:left;border-bottom:1px solid #E2E8F0;color:var(--texte2);font-size:11px;">Date</th>'
+    +'<th style="padding:10px 14px;text-align:left;border-bottom:1px solid #E2E8F0;color:var(--texte2);font-size:11px;">Début</th>'
+    +'<th style="padding:10px 14px;text-align:left;border-bottom:1px solid #E2E8F0;color:var(--texte2);font-size:11px;">Fin</th>'
+    +'<th style="padding:10px 14px;text-align:left;border-bottom:1px solid #E2E8F0;color:var(--texte2);font-size:11px;">Traitement</th>'
+    +'</tr></thead><tbody>';
+  trouvees.forEach((r,i)=>{
+    const bg=i%2===0?'#fff':'#F9FBFD';
+    html+='<tr style="background:'+bg+';border-bottom:1px solid #E2E8F0;">'
+      +'<td style="padding:10px 14px;color:#42A5F5;font-weight:700;font-size:11px;">'+(r.sem||'')+'</td>'
+      +'<td style="padding:10px 14px;">'+(r.org||'—')+'</td>'
+      +'<td style="padding:10px 14px;">'+(r.manif||'—')+'</td>'
+      +'<td style="padding:10px 14px;white-space:nowrap;">'+(r.date||'—')+'</td>'
+      +'<td style="padding:10px 14px;color:#FFB300;font-weight:600;">'+(r.deb||'—')+'</td>'
+      +'<td style="padding:10px 14px;color:#FFB300;font-weight:600;">'+(r.fin||'—')+'</td>'
+      +'<td style="padding:10px 14px;font-size:12px;color:var(--texte2);">'+(r.trait||'—')+'</td>'
+      +'</tr>';
+  });
+  html+='</tbody></table></div></div>';
+  result.innerHTML=html;
+}
+
+// ============================================================
+// PERSISTANCE LOCALE
+// ============================================================
+function saveLocal(){
+  try{
+    localStorage.setItem('mois_data',JSON.stringify(S.mois));
+    localStorage.setItem('act_data',JSON.stringify(S.act));
+    localStorage.setItem('acts_list',JSON.stringify(S.acts_list));
+    localStorage.setItem('verrou',S.verrou);
+    localStorage.setItem('annee',S.annee);
+    localStorage.setItem('mdp_asso',S.mdpAsso);
+    localStorage.setItem('mdp_admin',S.mdpAdmin);
+    localStorage.setItem('mdp_agent',S.mdpAgent);
+    localStorage.setItem('lieux_data',JSON.stringify(S.lieux));
+    localStorage.setItem('comptes_assos',JSON.stringify(S.comptes));
+    localStorage.setItem('saisons_data',JSON.stringify(S.saisons));
+  }catch(e){}
+}
+function saveM(){saveToDB();}
+function saveA(){saveToDB();}
+function saveS(){saveToDB();}
+
+// ============================================================
+// AUTO-REMPLISSAGE ORG POUR LES ASSOS
+// ============================================================
+function orgCellHtml(mois,ri,r,ro){
+  if(currentUser && currentUser.role==='asso'){
+    return '<span style="display:block;padding:5px 7px;font-size:12px;color:rgba(255,255,255,.7);min-height:28px;">'+(r.org||currentUser.nom)+'</span>';
+  }
+  const v = (r.org||'').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const q = "'";
+  return '<textarea class="ei'+ro+'" rows="1" onInput="autoGrow(this)"'
+    +' onchange="upMField('+q+mois+q+','+ri+','+q+'org'+q+',this.value);autoSync('+q+mois+q+','+ri+')"'
+    +' style="min-width:70px;max-width:80px;overflow:hidden;white-space:nowrap;">'+v+'</textarea>';
+}
+
+// ============================================================
+// INIT
+// ============================================================
+
+// ============================================================
+// GESTION MULTI-SAISONS
+// ============================================================
+
+// S.saisons = { 2026: {mois:{...}}, 2027: {mois:{...}}, ... }
+// S.annee = année couramment affichée dans le planning
+
+function getSaisons(){
+  // Retourne la liste des années de saison existantes
+  if(!S.saisons) S.saisons = {};
+  // La saison courante est toujours dans S.saisons
+  if(!S.saisons[S.annee]) S.saisons[S.annee] = { mois: S.mois };
+  return S.saisons;
+}
+
+function renderSaisonsList(){
+  const el = document.getElementById('saisons-liste');
+  if(!el) return;
+  const saisons = getSaisons();
+  const annees = Object.keys(saisons).map(Number).sort();
+  el.innerHTML = '';
+
+  if(!annees.length){
+    el.innerHTML = '<p style="color:var(--texte2);font-size:13px;">Aucune saison.</p>';
+    return;
+  }
+
+  annees.forEach(an=>{
+    const div = document.createElement('div');
+    div.className = 'vcard';
+    div.style.cssText = 'padding:14px 18px;margin-bottom:10px;align-items:center;';
+    const info = document.createElement('div');
+    info.style.flex = '1';
+    info.innerHTML = '<div style="font-size:16px;font-weight:700;">Saison '+an+'–'+(an+1)+'</div>'
+      +'<div style="font-size:12px;color:var(--texte2);margin-top:3px;">'
+      +(an===S.annee?'<span style="color:#2E7D32;font-weight:600;">✅ Saison active</span>':'')
+      +'</div>';
+    const btn = document.createElement('button');
+    btn.textContent = '🗑️ Supprimer';
+    btn.style.cssText = 'background:#C62828;color:#fff;padding:8px 14px;border-radius:8px;border:none;cursor:pointer;font-size:13px;';
+    btn.onclick = ()=>supprimerSaison(an);
+    div.appendChild(info);
+    div.appendChild(btn);
+    el.appendChild(div);
+  });
+
+  // Remplir le select des années disponibles
+  const sel = document.getElementById('new-saison-an');
+  if(sel){
+    sel.innerHTML = '<option value="">-- Choisir une année --</option>';
+    const anCourant = Math.max(...annees);
+    for(let y = anCourant+1; y <= anCourant+5; y++){
+      if(!saisons[y]){
+        const opt = document.createElement('option');
+        opt.value = y;
+        opt.textContent = y+'–'+(y+1);
+        sel.appendChild(opt);
+      }
+    }
+  }
+}
+
+function creerSaison(){
+  const sel = document.getElementById('new-saison-an');
+  const an = parseInt(sel.value);
+  if(!an){ toast('❌ Choisissez une année.'); return; }
+
+  const saisons = getSaisons();
+  if(saisons[an]){ toast('❌ Cette saison existe déjà.'); return; }
+
+  showConfirm(
+    '➕ Créer la saison '+an+'–'+(an+1),
+    'Un planning vierge sera créé pour la saison '+an+'–'+(an+1)+'. Les données existantes ne seront pas modifiées.',
+    ()=>{
+      // Générer le planning vierge pour cette année
+      const newMois = genererPlanningVierge(an);
+      saisons[an] = { mois: newMois };
+      S.saisons = saisons;
+      saveLocal(); saveToDB();
+      renderSaisonsList();
+      // Rafraîchir les badges dans le planning
+      updateSaisonBadges();
+      toast('✅ Saison '+an+'–'+(an+1)+' créée !');
+    }
+  );
+}
+
+function supprimerSaison(an){
+  if(an === S.annee){
+    toast('❌ Impossible de supprimer la saison active.');
+    return;
+  }
+  showConfirm(
+    '🗑️ Supprimer la saison '+an+'–'+(an+1),
+    'Toutes les données de la saison '+an+'–'+(an+1)+' seront définitivement perdues. Confirmez-vous cette décision ?',
+    ()=>{
+      const saisons = getSaisons();
+      delete saisons[an];
+      S.saisons = saisons;
+      saveLocal(); saveToDB();
+      renderSaisonsList();
+      updateSaisonBadges();
+      toast('🗑️ Saison '+an+'–'+(an+1)+' supprimée.');
+    }
+  );
+}
+
+function genererPlanningVierge(an){
+  // Générer 12 mois de planning vierge pour l'année an
+  const moisNoms = ['Septembre','Octobre','Novembre','Décembre','Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Aout'];
+  const moisNums = [9,10,11,12,1,2,3,4,5,6,7,8];
+  const moisAns  = [an,an,an,an,an+1,an+1,an+1,an+1,an+1,an+1,an+1,an+1];
+
+  const result = {};
+  moisNoms.forEach((nom,i)=>{
+    // Calculer les jours du mois
+    const numMois = moisNums[i];
+    const annee   = moisAns[i];
+    const nbJours = new Date(annee, numMois, 0).getDate();
+    const rows = [];
+    let semCount = 1;
+
+    for(let j=1; j<=nbJours; j++){
+      const date = new Date(annee, numMois-1, j);
+      const jourIdx = date.getDay(); // 0=dim, 1=lun...
+      const jours = ['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+      const jourNom = jours[jourIdx];
+
+      // Numéro de semaine (lundi = début de semaine)
+      let sem = '';
+      if(jourNom === 'lundi' || j===1){
+        if(jourNom === 'lundi') sem = 'S'+semCount++;
+        else if(j===1) sem = 'S'+semCount++;
+      }
+
+      rows.push({
+        sem, org:'', manif:'', ddate:'', trait:'', rem:'', clubs:'',
+        jour: jourNom, num: j, deb:'', fin:'', dur:'0'
+      });
+    }
+    result[nom] = { an: annee, num: numMois, rows };
+  });
+  return result;
+}
+
+function basculerSaison(an){
+  // Sauvegarder la saison courante
+  const saisons = getSaisons();
+  saisons[S.annee] = { mois: S.mois };
+
+  // Charger la nouvelle saison
+  S.annee = an;
+  S.mois  = saisons[an].mois;
+  S.saisons = saisons;
+  saveLocal(); saveToDB();
+
+  // Rafraîchir le planning actif
+  const isAdmin = currentUser && (currentUser.role==='admin'||currentUser.role==='agent');
+  const zone  = isAdmin ? 'admin-tabs-zone'  : 'asso-tabs-zone';
+  const cont  = isAdmin ? 'admin-content'    : 'asso-content';
+  buildTabs(zone, cont, isAdmin);
+  updateSaisonBadges();
+  toast('📅 Saison '+an+'–'+(an+1)+' chargée.');
+}
+
+function updateSaisonBadges(){
+  // Mettre à jour les badges de saison dans la topbar du planning
+  ['pg-asso','pg-admin-planning'].forEach(pgId=>{
+    const pg = document.getElementById(pgId);
+    if(!pg) return;
+    let badgeZone = pg.querySelector('.saison-badges');
+    if(!badgeZone){
+      badgeZone = document.createElement('div');
+      badgeZone.className = 'saison-badges';
+      badgeZone.style.cssText = 'display:flex;gap:6px;align-items:center;';
+      const topbar = pg.querySelector('.topbar');
+      if(topbar) topbar.appendChild(badgeZone);
+    }
+    const saisons = getSaisons();
+    const annees = Object.keys(saisons).map(Number).sort();
+    badgeZone.innerHTML = '';
+    annees.forEach(an=>{
+      const btn = document.createElement('button');
+      btn.textContent = an;
+      btn.style.cssText = 'padding:4px 10px;border-radius:20px;border:none;cursor:pointer;font-weight:700;font-size:12px;font-family:Outfit,sans-serif;'
+        +(an===S.annee ? 'background:#FF6B00;color:#fff;' : 'background:rgba(255,255,255,.15);color:#fff;');
+      btn.onclick = ()=>basculerSaison(an);
+      badgeZone.appendChild(btn);
+    });
+  });
+}
+
+
+majVerrou();
+initSupabase();
+
+</script>
+
+<!-- PAGE GESTION DES SAISONS -->
+<div id="pg-saisons" class="page">
+<div class="admin-bg">
+  <div class="topbar blue"><h1>📅 Gestion des saisons</h1><button class="btn-back" onclick="go('pg-admin')">← Retour</button></div>
+  <div class="wrap" style="max-width:700px;">
+    <h2>Saisons existantes</h2>
+    <p class="st">Chaque saison contient son propre planning de Septembre à Août.</p>
+    <div id="saisons-liste" style="margin-bottom:32px;"></div>
+
+    <h2>Créer une nouvelle saison</h2>
+    <p class="st">Un planning vierge sera créé pour la saison choisie.</p>
+    <div class="fg">
+      <label>Année de début de la saison</label>
+      <select id="new-saison-an" style="width:100%;padding:10px 12px;border:2px solid #E2E8F0;border-radius:9px;font-size:15px;font-family:'Outfit',sans-serif;color:var(--texte);outline:none;background:#fff;">
+        <option value="">-- Choisir une année --</option>
+      </select>
+    </div>
+    <button class="save-btn" onclick="creerSaison()">➕ Créer cette saison</button>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
